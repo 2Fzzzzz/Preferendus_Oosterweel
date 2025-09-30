@@ -49,6 +49,11 @@ strTitleX3 = str3 + ' (km)'
 strTitleX4 = str4 + ' (x100k)'
 strTitleY = 'Preference score'
 
+def calculate_cost(x1, x2, x3, x4):
+    return x1 * x2 * 0.05  # in M€
+def calculate_capacity(x1, x2, x3, x4):
+    return x2  # in k
+
 def objective_p1(x1, x2, x3, x4):
     """
     Objective to minimize the cost.
@@ -56,7 +61,7 @@ def objective_p1(x1, x2, x3, x4):
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (x1 * x2 * 0.05))
+    return pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (calculate_cost(x1, x2, x3, x4)))
 
 
 def objective_p2(x1, x2, x3, x4):
@@ -66,7 +71,7 @@ def objective_p2(x1, x2, x3, x4):
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, (x2))
+    return pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, (calculate_capacity(x1, x2, x3, x4)))
 
 
 def objective_p3(x1, x2, x3, x4):
@@ -275,10 +280,10 @@ for i in range(2):
 
     # todo: calculate the individual preference scores for the results
     # Calculate individual preference scores for the results
-    c1_res = design_variables_IMAP[0] * design_variables_IMAP[1] * 0.05
+    c1_res = calculate_cost(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3])
     p1_res = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, c1_res)
 
-    c2_res = design_variables_IMAP[1]
+    c2_res = calculate_capacity(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3])
     p2_res = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, c2_res)
 
     c3_res = design_variables_IMAP[2]
