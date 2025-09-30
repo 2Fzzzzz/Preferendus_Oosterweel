@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Solution Model="SolutionService">
-  <Alternative Name="A1" Value="1.9623295014112500e+01" />
-  <Alternative Name="A2" Value="1.0000000000000000e+02" />
-  <Alternative Name="A3" Value="0.0000000000000000e+00" />
-  <Alternative Name="A4" Value="7.0863173539353213e+01" />
+  <Alternative Name="A1" Value="1.0000000000000000e+02" />
+  <Alternative Name="A2" Value="6.7989635116674023e+01" />
+  <Alternative Name="A3" Value="3.8632708132346202e+01" />
+  <Alternative Name="A4" Value="0.0000000000000000e+00" />
 </Solution>

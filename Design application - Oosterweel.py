@@ -22,24 +22,30 @@ w2 = 0.25
 w3 = 0.25
 w4 = 0.25
 
+# The Preference scores (p_points) and corresponding Objective results (x_points)
+X_POINTS_COST, P_POINTS_COST = [[300, 1500, 3000], [100, 60, 0]]         #Cost (M€)
+X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[50, 175, 300], [0, 50, 100]]    #Capacity (k)
+X_POINTS_3, P_POINTS_3 = [[20, 30, 40], [0, 70, 100]]                    #Distance (km)
+X_POINTS_4, P_POINTS_4 = [[6, 8, 10], [0, 20, 100]]
+
 def objective_p1(x1, x2, x3, x4):
     """
-    Objective to maximize the profit preference.
+    Objective to maximize the cost preference.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate([15, 20, 40], [100, 20, 0], (x1))
+    return pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (x1))
 
 
 def objective_p2(x1, x2, x3, x4):
     """
-    Objective to maximize the CO2 emission preference.
+    Objective to maximize the capacity preference.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate([.5, .7, .9], [100, 45, 0], (x2))
+    return pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, (x2))
 
 
 def objective_p3(x1, x2, x3, x4):
@@ -49,7 +55,7 @@ def objective_p3(x1, x2, x3, x4):
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate([20, 30, 40], [0, 70, 100], (x3))
+    return pchip_interpolate(X_POINTS_3, P_POINTS_3, (x3))
 
 def objective_p4(x1, x2, x3, x4):
     """
@@ -58,7 +64,7 @@ def objective_p4(x1, x2, x3, x4):
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate([6, 8, 10], [0, 20, 100], (x4))
+    return pchip_interpolate(X_POINTS_4, P_POINTS_4, (x4))
 
 def objective(variables):
     """
@@ -116,22 +122,22 @@ cons = [['ineq', constraint_1], ['ineq', constraint_2]]
 
 # set bounds for all variables
 b1 = [1.5, 5]  #Length(km)
-b2 = [0.5, 0.9]  #
+b2 = [0.5, 0.9]  #Diameter(m)
 b3 = [20, 40]  #
 b4 = [2, 8]  #Lanes
 bounds = [b1, b2, b3, b4]
 
 # create arrays for plotting continuous preference curves
-c1 = np.linspace(15, 40)
-c2 = np.linspace(.5, .9)
-c3 = np.linspace(20, 40)
-c4 = np.linspace(6,10)
+c1 = np.linspace(X_POINTS_COST[0], X_POINTS_COST[-1])
+c2 = np.linspace(X_POINTS_CAPACITY[0], X_POINTS_CAPACITY[-1])
+c3 = np.linspace(X_POINTS_3[0], X_POINTS_3[-1])
+c4 = np.linspace(X_POINTS_4[0], X_POINTS_4[-1])
 
 # calculate the preference functions
-p1 = pchip_interpolate([15, 20, 40], [100, 20, 0], (c1))
-p2 = pchip_interpolate([.5, .7, .9], [100, 45, 0], (c2))
-p3 = pchip_interpolate([20, 30, 40], [0, 70, 100], (c3))
-p4 = pchip_interpolate([6, 8, 10], [0, 20, 100], (c4))
+p1 = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (c1))
+p2 = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, (c2))
+p3 = pchip_interpolate(X_POINTS_3, P_POINTS_3, (c3))
+p4 = pchip_interpolate(X_POINTS_4, P_POINTS_4, (c4))
 
 # create figure that plots all preference curves and the preference scores of the returned results of the GA
 fig = plt.figure(figsize=((10,10)))
@@ -144,10 +150,10 @@ plt.rcParams['savefig.dpi'] = 300
 
 ax1 = fig.add_subplot(2, 2, 1)
 ax1.plot(c1, p1, label='Preference curve', color='black')
-ax1.set_xlim((15, 40))
+ax1.set_xlim((X_POINTS_COST[0], X_POINTS_COST[-1]))
 ax1.set_ylim((0, 102))
 ax1.set_title('Ministry of Finance')
-ax1.set_xlabel('Investment [$]')
+ax1.set_xlabel('Cost [million €]')
 ax1.set_ylabel('Preference score')
 ax1.grid()
 ax1.legend()
@@ -156,10 +162,10 @@ ax1.grid(linestyle = '--')
 #fig = plt.figure()
 ax2 = fig.add_subplot(2, 2, 2)
 ax2.plot(c2, p2, label='Preference curve', color='black')
-ax2.set_xlim((.5, .9))
+ax2.set_xlim((X_POINTS_CAPACITY[0], X_POINTS_CAPACITY[-1]))
 ax2.set_ylim((0, 102))
 ax2.set_title('Airlines')
-ax2.set_xlabel('Travel time [hr]')
+ax2.set_xlabel('Capacity [k]')
 ax2.set_ylabel('Preference score')
 ax2.grid()
 ax2.legend()
@@ -168,7 +174,7 @@ ax2.grid(linestyle = '--')
 #fig = plt.figure()
 ax3 = fig.add_subplot(2, 2, 3)
 ax3.plot(c3, p3, label='Preference curve', color='black')
-ax3.set_xlim((20, 40))
+ax3.set_xlim((X_POINTS_3[0], X_POINTS_3[-1]))
 ax3.set_ylim((0, 102))
 ax3.set_title('Ministry of Environment')
 ax3.set_xlabel('Distance [km]')
@@ -180,7 +186,7 @@ ax3.grid(linestyle = '--')
 #fig = plt.figure()
 ax4 = fig.add_subplot(2, 2, 4)
 ax4.plot(c4, p4, label='Preference curve', color='black')
-ax4.set_xlim((6, 10))
+ax4.set_xlim((X_POINTS_4[0], X_POINTS_4[-1]))
 ax4.set_ylim((0, 102))
 ax4.set_title('Airport')
 ax4.set_xlabel('Flight movements [x100k]')
@@ -194,7 +200,7 @@ ax2.legend()
 fig.tight_layout()
 
 #Two  lines to make our compiler able to draw:
-fig.savefig("schipholcasefunctions.png")
+fig.savefig("Oosterweel.png")
 
 # We run the optimization with two paradigms
 paradigm = ['minmax', 'tetra']
@@ -235,16 +241,16 @@ for i in range(2):
 
     # Calculate individual preference scores for the results
     c1_res = design_variables_IMAP[0]
-    p1_res = pchip_interpolate([15, 20, 40], [100, 20, 0], c1_res)
+    p1_res = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, c1_res)
 
     c2_res = design_variables_IMAP[1]
-    p2_res = pchip_interpolate([0.5, 0.7, 0.9], [100, 45, 0], c2_res)
+    p2_res = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, c2_res)
 
     c3_res = design_variables_IMAP[2]
-    p3_res = pchip_interpolate([20, 30, 40], [0, 70, 100], c3_res)
+    p3_res = pchip_interpolate(X_POINTS_3, P_POINTS_3, c3_res)
 
     c4_res = design_variables_IMAP[3]
-    p4_res = pchip_interpolate([6, 8, 10], [0, 20, 100], c4_res)
+    p4_res = pchip_interpolate(X_POINTS_4, P_POINTS_4, c4_res)
 
     # Debugging prints to check calculated values
     print(f"c1_res: {c1_res}, p1_res: {p1_res}")
@@ -260,17 +266,18 @@ for i in range(2):
 
     # Plot the continuous preference curves only for the first paradigm
     if i == 0:
-        # Create arrays for plotting continuous preference curves
-        c1 = np.linspace(15, 40)
-        c2 = np.linspace(0.5, 0.9)
-        c3 = np.linspace(20, 40)
-        c4 = np.linspace(6, 10)
+        # Already defined above
+        # # Create arrays for plotting continuous preference curves
+        # c1 = np.linspace(15, 40)
+        # c2 = np.linspace(0.5, 0.9)
+        # c3 = np.linspace(20, 40)
+        # c4 = np.linspace(6, 10)
 
-        # Calculate the preference functions
-        p1 = pchip_interpolate([15, 20, 40], [100, 20, 0], c1)
-        p2 = pchip_interpolate([0.5, 0.7, 0.9], [100, 45, 0], c2)
-        p3 = pchip_interpolate([20, 30, 40], [0, 70, 100], c3)
-        p4 = pchip_interpolate([6, 8, 10], [0, 20, 100], c4)
+        # # Calculate the preference functions
+        # p1 = pchip_interpolate([15, 20, 40], [100, 20, 0], c1)
+        # p2 = pchip_interpolate([0.5, 0.7, 0.9], [100, 45, 0], c2)
+        # p3 = pchip_interpolate([20, 30, 40], [0, 70, 100], c3)
+        # p4 = pchip_interpolate([6, 8, 10], [0, 20, 100], c4)
 
         # Plot each preference curve on the respective subplot
         ax1.plot(c1, p1, label='Preference curve', color='black')
@@ -285,11 +292,11 @@ ax3.legend()
 ax4.legend()
 
 ax1.set_title('Optimal Solution for Cost (x1)')
-ax1.set_xlabel('Cost in dollars')
+ax1.set_xlabel('Cost in Million Euros')
 ax1.set_ylabel('Preference score')
 
-ax2.set_title('Optimal Solution for Time (x2)')
-ax2.set_xlabel('Time in hours')
+ax2.set_title('Optimal Solution for Capacity (x2)')
+ax2.set_xlabel('Capacity in hours')
 ax2.set_ylabel('Preference score')
 
 ax3.set_title('Optimal Solution for Distance (x3)')
