@@ -17,30 +17,51 @@ from scipy.optimize import fsolve
 
 from genetic_algorithm_pfm import GeneticAlgorithm
 
-w1 = 0.25
-w2 = 0.25
-w3 = 0.25
-w4 = 0.25
+w1 = 0.5   #City of Antwerp
+w2 = 0.5   #Lantis(Project manager)
+w3 = 0.0   #Inhabitants
+w4 = 0.0   #Enviromental Group
+w5 = 0.25   #Contractor(Not used currently)
 
+# todo: change the points and preference scores according to the case at hand
 # The Preference scores (p_points) and corresponding Objective results (x_points)
-X_POINTS_COST, P_POINTS_COST = [[300, 1500, 3000], [100, 60, 0]]         #Cost (M€)
-X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[50, 175, 300], [0, 50, 100]]    #Capacity (k)
+X_POINTS_COST, P_POINTS_COST = [[150, 575, 1000], [100, 60, 0]]         #Cost (M€)
+X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[2, 4, 10], [0, 50, 100]]       #Capacity (k)
 X_POINTS_3, P_POINTS_3 = [[20, 30, 40], [0, 70, 100]]                    #Distance (km)
 X_POINTS_4, P_POINTS_4 = [[6, 8, 10], [0, 20, 100]]
 
+# todo: change the bounds according to the case at hand
+# set bounds for all variables
+b1 = [1500, 2000]        #Tunnel Length(m) X1
+b2 = [2, 10]             #Lanes X2
+b3 = [20, 40]       #Distance(km) X3
+b4 = [6, 10]        #Lanes X4
+bounds = [b1, b2, b3, b4]
+
+# todo: change the variable names according to the case at hand
+strCost = 'Cost'
+strCapacity = 'Capacity'
+str3 = 'Distance'
+str4 = 'Flight movements'
+strTitleXCost = strCost + ' (M€)'
+strTitleXCapacity = strCapacity + ' (k)'
+strTitleX3 = str3 + ' (km)'
+strTitleX4 = str4 + ' (x100k)'
+strTitleY = 'Preference score'
+
 def objective_p1(x1, x2, x3, x4):
     """
-    Objective to maximize the cost preference.
+    Objective to minimize the cost.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (x1))
+    return pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (x1 * x2 * 0.05))
 
 
 def objective_p2(x1, x2, x3, x4):
     """
-    Objective to maximize the capacity preference.
+    Objective to maximize the capacity.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
@@ -89,6 +110,7 @@ def objective(variables):
     # aggregate preference scores and return this to the GA
     return [w1, w2, w3, w4], [p_1, p_2, p_3, p_4]
 
+# todo: change the constraints according to the case at hand
 def constraint_1(variables):
     """Constraint that checks if the sum of the areas x1 and x2 is not higher than 10,000 m2.
 
@@ -99,9 +121,8 @@ def constraint_1(variables):
     x2 = variables[:, 1]
     x3 = variables[:, 2]
     x4 = variables[:, 3]
-
-    return x3/120 - x2  # < 0
-
+    # Capacity should be no more than 6 times the cost
+    return x2 * 6 - x1  # < 0
 
 def constraint_2(variables):
     """Constraint that checks if the sum of the areas x1 and x2 is not lower than 3,000 m2.
@@ -118,14 +139,8 @@ def constraint_2(variables):
 
 
 # define list with constraints
-cons = [['ineq', constraint_1], ['ineq', constraint_2]]
-
-# set bounds for all variables
-b1 = [1.5, 5]  #Length(km)
-b2 = [0.5, 0.9]  #Diameter(m)
-b3 = [20, 40]  #
-b4 = [2, 8]  #Lanes
-bounds = [b1, b2, b3, b4]
+#cons = [['ineq', constraint_1], ['ineq', constraint_2]]
+cons = []
 
 # create arrays for plotting continuous preference curves
 c1 = np.linspace(X_POINTS_COST[0], X_POINTS_COST[-1])
@@ -152,9 +167,9 @@ ax1 = fig.add_subplot(2, 2, 1)
 ax1.plot(c1, p1, label='Preference curve', color='black')
 ax1.set_xlim((X_POINTS_COST[0], X_POINTS_COST[-1]))
 ax1.set_ylim((0, 102))
-ax1.set_title('Ministry of Finance')
-ax1.set_xlabel('Cost [million €]')
-ax1.set_ylabel('Preference score')
+ax1.set_title('City of Antwerp')
+ax1.set_xlabel(strTitleXCost)
+ax1.set_ylabel(strTitleY)
 ax1.grid()
 ax1.legend()
 ax1.grid(linestyle = '--')
@@ -164,9 +179,9 @@ ax2 = fig.add_subplot(2, 2, 2)
 ax2.plot(c2, p2, label='Preference curve', color='black')
 ax2.set_xlim((X_POINTS_CAPACITY[0], X_POINTS_CAPACITY[-1]))
 ax2.set_ylim((0, 102))
-ax2.set_title('Airlines')
-ax2.set_xlabel('Capacity [k]')
-ax2.set_ylabel('Preference score')
+ax2.set_title('Inhabitants')
+ax2.set_xlabel(strTitleXCapacity)
+ax2.set_ylabel(strTitleY)
 ax2.grid()
 ax2.legend()
 ax2.grid(linestyle = '--')
@@ -177,8 +192,8 @@ ax3.plot(c3, p3, label='Preference curve', color='black')
 ax3.set_xlim((X_POINTS_3[0], X_POINTS_3[-1]))
 ax3.set_ylim((0, 102))
 ax3.set_title('Ministry of Environment')
-ax3.set_xlabel('Distance [km]')
-ax3.set_ylabel('Preference score')
+ax3.set_xlabel(strTitleX3)
+ax3.set_ylabel(strTitleY)
 ax3.grid()
 ax3.legend()
 ax3.grid(linestyle = '--')
@@ -189,8 +204,8 @@ ax4.plot(c4, p4, label='Preference curve', color='black')
 ax4.set_xlim((X_POINTS_4[0], X_POINTS_4[-1]))
 ax4.set_ylim((0, 102))
 ax4.set_title('Airport')
-ax4.set_xlabel('Flight movements [x100k]')
-ax4.set_ylabel('Preference score')
+ax4.set_xlabel(strTitleX4)
+ax4.set_ylabel(strTitleY)
 ax4.grid()
 ax4.legend()
 ax4.grid(linestyle = '--')
@@ -216,6 +231,25 @@ ax2 = fig.add_subplot(2, 2, 2)
 ax3 = fig.add_subplot(2, 2, 3)
 ax4 = fig.add_subplot(2, 2, 4)
 
+ # Already defined above
+# # Create arrays for plotting continuous preference curves
+# c1 = np.linspace(15, 40)
+# c2 = np.linspace(0.5, 0.9)
+# c3 = np.linspace(20, 40)
+# c4 = np.linspace(6, 10)
+
+# # Calculate the preference functions
+# p1 = pchip_interpolate([15, 20, 40], [100, 20, 0], c1)
+# p2 = pchip_interpolate([0.5, 0.7, 0.9], [100, 45, 0], c2)
+# p3 = pchip_interpolate([20, 30, 40], [0, 70, 100], c3)
+# p4 = pchip_interpolate([6, 8, 10], [0, 20, 100], c4)
+
+# Plot each preference curve on the respective subplot
+ax1.plot(c1, p1, label='Preference curve', color='black')
+ax2.plot(c2, p2, label='Preference curve', color='black')
+ax3.plot(c3, p3, label='Preference curve', color='black')
+ax4.plot(c4, p4, label='Preference curve', color='black')
+
 for i in range(2):
     # Dictionary with parameter settings for the GA run with the IMAP solver
     options = {
@@ -225,7 +259,7 @@ for i in range(2):
         'r_cross': 0.8,
         'max_stall': 8,
         'aggregation': paradigm[i],  # minmax or a_fine
-        'var_type': 'real'
+        "var_type_mixed": ["int", "int", "real", "real"],
     }
 
     # Run the GA and print its result
@@ -234,13 +268,14 @@ for i in range(2):
     score_IMAP, design_variables_IMAP, _ = ga.run()
 
     # Print the optimal result in a readable format
-    print(f'Optimal result for x1 = {round(design_variables_IMAP[0], 2)} dollars and '
-          f'x2 = {round(design_variables_IMAP[1], 2)} hours and '
+    print(f'Optimal result for x1 = {round(design_variables_IMAP[0], 2)} meters in length and '
+          f'x2 = {round(design_variables_IMAP[1], 2)} lanes and '
           f'x3 = {round(design_variables_IMAP[2], 2)} kilometers and '
           f'x4 = {round(design_variables_IMAP[3], 2)} flight movements')
 
+    # todo: calculate the individual preference scores for the results
     # Calculate individual preference scores for the results
-    c1_res = design_variables_IMAP[0]
+    c1_res = design_variables_IMAP[0] * design_variables_IMAP[1] * 0.05
     p1_res = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, c1_res)
 
     c2_res = design_variables_IMAP[1]
@@ -264,48 +299,27 @@ for i in range(2):
     ax3.scatter(c3_res, p3_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
     ax4.scatter(c4_res, p4_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
 
-    # Plot the continuous preference curves only for the first paradigm
-    if i == 0:
-        # Already defined above
-        # # Create arrays for plotting continuous preference curves
-        # c1 = np.linspace(15, 40)
-        # c2 = np.linspace(0.5, 0.9)
-        # c3 = np.linspace(20, 40)
-        # c4 = np.linspace(6, 10)
-
-        # # Calculate the preference functions
-        # p1 = pchip_interpolate([15, 20, 40], [100, 20, 0], c1)
-        # p2 = pchip_interpolate([0.5, 0.7, 0.9], [100, 45, 0], c2)
-        # p3 = pchip_interpolate([20, 30, 40], [0, 70, 100], c3)
-        # p4 = pchip_interpolate([6, 8, 10], [0, 20, 100], c4)
-
-        # Plot each preference curve on the respective subplot
-        ax1.plot(c1, p1, label='Preference curve', color='black')
-        ax2.plot(c2, p2, label='Preference curve', color='black')
-        ax3.plot(c3, p3, label='Preference curve', color='black')
-        ax4.plot(c4, p4, label='Preference curve', color='black')
-
 # Add legends and set titles for each subplot
 ax1.legend()
 ax2.legend()
 ax3.legend()
 ax4.legend()
 
-ax1.set_title('Optimal Solution for Cost (x1)')
-ax1.set_xlabel('Cost in Million Euros')
-ax1.set_ylabel('Preference score')
+ax1.set_title('Optimal Solution for ' + strCost + ' (x1)')
+ax1.set_xlabel(strTitleXCost)
+ax1.set_ylabel(strTitleY)
 
-ax2.set_title('Optimal Solution for Capacity (x2)')
-ax2.set_xlabel('Capacity in hours')
-ax2.set_ylabel('Preference score')
+ax2.set_title('Optimal Solution for ' + strCapacity + ' (x2)')
+ax2.set_xlabel(strTitleXCapacity)
+ax2.set_ylabel(strTitleY)
 
-ax3.set_title('Optimal Solution for Distance (x3)')
-ax3.set_xlabel('Distance in kilometers')
-ax3.set_ylabel('Preference score')
+ax3.set_title('Optimal Solution for ' + str3 + ' (x3)')
+ax3.set_xlabel(strTitleX3)
+ax3.set_ylabel(strTitleY)
 
-ax4.set_title('Optimal Solution for Flights (x4)')
-ax4.set_xlabel('Number of flights')
-ax4.set_ylabel('Preference score')
+ax4.set_title('Optimal Solution for ' + str4 + ' (x4)')
+ax4.set_xlabel(strTitleX4)
+ax4.set_ylabel(strTitleY)
 
 # Adjust the layout
 fig.tight_layout()
