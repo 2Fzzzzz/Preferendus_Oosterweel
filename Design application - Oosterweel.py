@@ -27,8 +27,8 @@ w5 = 0.2   #Contractor
 # The Preference scores (p_points) and corresponding Objective results (x_points)
 X_POINTS_COST, P_POINTS_COST = [[150, 575, 1000], [100, 60, 0]]         #Cost (M€)
 X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[2, 4, 10], [0, 50, 100]]       #Capacity
-X_POINTS_ConsTime, P_POINTS_ConsTime = [[20, 30, 40], [0, 70, 100]]     #Construction time (years)
-X_POINTS_CO2, P_POINTS_CO2 = [[6, 8, 10], [0, 20, 100]]                 #CO2 emissions (ton)   
+X_POINTS_ConsTime, P_POINTS_ConsTime = [[1, 30, 50], [0, 70, 100]]     #Construction time (years)
+X_POINTS_CO2, P_POINTS_CO2 = [[10, 800, 1000], [0, 20, 100]]                 #CO2 emissions (ton)   
 X_POINTS_Profit, P_POINTS_Profit = [[100, 300, 500], [100, 50, 0]]      #Profit (M€)
 
 # todo: change the bounds according to the case at hand
@@ -47,14 +47,14 @@ bounds = [b1, b2, b3, b4, b5, b6, b7, b8, b9]
 # todo: change the variable names according to the case at hand
 strCost = 'Cost'
 strCapacity = 'Capacity'
-str3 = 'Distance'
-str4 = 'Flight movements'
-str5 = 'Construction time'
+str3 = 'Construction time'
+str4 = 'CO2 emissions'
+str5 = 'Profit'
 strTitleXCost = strCost + ' (M€)'
-strTitleXCapacity = strCapacity + ' (k)'
-strTitleX3 = str3 + ' (km)'
-strTitleX4 = str4 + ' (x100k)'
-strTitleX5 = str5 + ' (days)'
+strTitleXCapacity = strCapacity + ''
+strTitleX3 = str3 + ' (years)'
+strTitleX4 = str4 + ' (ton)'
+strTitleX5 = str5 + ' (M€)'
 strTitleY = 'Preference score'
 
 def calculate_cost(x1, x2, x3, x4, x5, x6, x7, x8, x9):
@@ -104,16 +104,16 @@ def objective_p4(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_, P_POINTS_4, (x4))
+    return pchip_interpolate(X_POINTS_CO2, P_POINTS_CO2, (calculate_CO2_emissions(x1, x2, x3, x4, x5, x6, x7, x8, x9)))
 
-def objective_p5(x1, x2, x3, x4):
+def objective_p5(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     """
     Objective to maximize the shopping potential preference.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_5, P_POINTS_5, (x5))
+    return pchip_interpolate(X_POINTS_Profit, P_POINTS_Profit, (calculate_profit(x1, x2, x3, x4, x5, x6, x7, x8, x9)))
 
 def objective(variables):
     """
@@ -129,21 +129,24 @@ def objective(variables):
     x3 = variables[:, 2]
     x4 = variables[:, 3]
     x5 = variables[:, 4]
+    x6 = variables[:, 5]
+    x7 = variables[:, 6]
+    x8 = variables[:, 7]
+    x9 = variables[:, 8]
 
     # calculate the preference scores
-    p_1 = objective_p1(x1, x2, x3, x4)
-    p_2 = objective_p2(x1, x2, x3, x4)
-    p_3 = objective_p3(x1, x2, x3, x4)
-    p_4 = objective_p4(x1, x2, x3, x4)
-    p_5 = objective_p5(x1, x2, x3, x4)
+    p_1 = objective_p1(x1, x2, x3, x4, x5, x6, x7, x8, x9)
+    p_2 = objective_p2(x1, x2, x3, x4, x5, x6, x7, x8, x9)
+    p_3 = objective_p3(x1, x2, x3, x4, x5, x6, x7, x8, x9)
+    p_4 = objective_p4(x1, x2, x3, x4, x5, x6, x7, x8, x9)
+    p_5 = objective_p5(x1, x2, x3, x4, x5, x6, x7, x8, x9)
 
     # aggregate preference scores and return this to the GA
     return [w1, w2, w3, w4, w5], [p_1, p_2, p_3, p_4, p_5]
 
 # todo: change the constraints according to the case at hand
-def constraint_1(variables):
-    """Constraint that checks if the sum of the areas x1 and x2 is not higher than 10,000 m2.
-
+def constraint_Speed(variables):
+    """
     :param variables: ndarray of n-by-m, with n the population size of the GA and m the number of variables.
     :return: list with scores of the constraint
     """
@@ -152,12 +155,15 @@ def constraint_1(variables):
     x3 = variables[:, 2]
     x4 = variables[:, 3]
     x5 = variables[:, 4]
-    # Capacity should be no more than 6 times the cost
-    return x2 * 6 - x1  # < 0
+    x6 = variables[:, 5]
+    x7 = variables[:, 6]
+    x8 = variables[:, 7]
+    x9 = variables[:, 8]
+    # Speed limit should be at least 10 times the number of lanes
+    return x6 - x2 * 10 # < 0
 
-def constraint_2(variables):
-    """Constraint that checks if the sum of the areas x1 and x2 is not lower than 3,000 m2.
-
+def constraint_HeightWidth(variables):
+    """
     :param variables: ndarray of n-by-m, with n the population size of the GA and m the number of variables.
     :return: list with scores of the constraint
     """
@@ -166,27 +172,31 @@ def constraint_2(variables):
     x3 = variables[:, 2]
     x4 = variables[:, 3]
     x5 = variables[:, 4]
+    x6 = variables[:, 5]
+    x7 = variables[:, 6]
+    x8 = variables[:, 7]
+    x9 = variables[:, 8]
+    # Height should be at least 0.04 times the total width
+    return 0.04 * (x2 * x5) - x4 # < 0
 
-    return 15 + 0.15*(x4 - 6) + 0.2*(x3-10) - x1  # < 0
 
 
 # todo: define list with constraints
-#cons = [['ineq', constraint_1], ['ineq', constraint_2]]
-cons = []
+cons = [['ineq', constraint_Speed], ['ineq', constraint_HeightWidth]]
 
 # create arrays for plotting continuous preference curves
 c1 = np.linspace(X_POINTS_COST[0], X_POINTS_COST[-1])
 c2 = np.linspace(X_POINTS_CAPACITY[0], X_POINTS_CAPACITY[-1])
-c3 = np.linspace(X_POINTS_3[0], X_POINTS_3[-1])
-c4 = np.linspace(X_POINTS_4[0], X_POINTS_4[-1])
-c5 = np.linspace(X_POINTS_5[0], X_POINTS_5[-1])
+c3 = np.linspace(X_POINTS_ConsTime[0], X_POINTS_ConsTime[-1])
+c4 = np.linspace(X_POINTS_CO2[0], X_POINTS_CO2[-1])
+c5 = np.linspace(X_POINTS_Profit[0], X_POINTS_Profit[-1])
 
 # calculate the preference functions
 p1 = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (c1))
 p2 = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, (c2))
-p3 = pchip_interpolate(X_POINTS_3, P_POINTS_3, (c3))
-p4 = pchip_interpolate(X_POINTS_4, P_POINTS_4, (c4))
-p5 = pchip_interpolate(X_POINTS_5, P_POINTS_5, (c5))
+p3 = pchip_interpolate(X_POINTS_ConsTime, P_POINTS_ConsTime, (c3))
+p4 = pchip_interpolate(X_POINTS_CO2, P_POINTS_CO2, (c4))
+p5 = pchip_interpolate(X_POINTS_Profit, P_POINTS_Profit, (c5))
 
 # create figure that plots all preference curves and the preference scores of the returned results of the GA
 fig = plt.figure(figsize=((10,10)))
@@ -197,7 +207,7 @@ font2 = {'size':15}
 plt.rcParams['font.size'] = '12'
 plt.rcParams['savefig.dpi'] = 300
 
-ax1 = fig.add_subplot(2, 2, 1)
+ax1 = fig.add_subplot(2, 3, 1)
 ax1.plot(c1, p1, label='Preference curve', color='black')
 ax1.set_xlim((X_POINTS_COST[0], X_POINTS_COST[-1]))
 ax1.set_ylim((0, 102))
@@ -209,7 +219,7 @@ ax1.legend()
 ax1.grid(linestyle = '--')
 
 #fig = plt.figure()
-ax2 = fig.add_subplot(2, 2, 2)
+ax2 = fig.add_subplot(2, 3, 2)
 ax2.plot(c2, p2, label='Preference curve', color='black')
 ax2.set_xlim((X_POINTS_CAPACITY[0], X_POINTS_CAPACITY[-1]))
 ax2.set_ylim((0, 102))
@@ -221,11 +231,11 @@ ax2.legend()
 ax2.grid(linestyle = '--')
 
 #fig = plt.figure()
-ax3 = fig.add_subplot(2, 2, 3)
+ax3 = fig.add_subplot(2, 3, 3)
 ax3.plot(c3, p3, label='Preference curve', color='black')
-ax3.set_xlim((X_POINTS_3[0], X_POINTS_3[-1]))
+ax3.set_xlim((X_POINTS_ConsTime[0], X_POINTS_ConsTime[-1]))
 ax3.set_ylim((0, 102))
-ax3.set_title('Ministry of Environment')
+ax3.set_title('Lantis')
 ax3.set_xlabel(strTitleX3)
 ax3.set_ylabel(strTitleY)
 ax3.grid()
@@ -233,11 +243,11 @@ ax3.legend()
 ax3.grid(linestyle = '--')
 
 #fig = plt.figure()
-ax4 = fig.add_subplot(2, 2, 4)
+ax4 = fig.add_subplot(2, 3, 4)
 ax4.plot(c4, p4, label='Preference curve', color='black')
-ax4.set_xlim((X_POINTS_4[0], X_POINTS_4[-1]))
+ax4.set_xlim((X_POINTS_CO2[0], X_POINTS_CO2[-1]))
 ax4.set_ylim((0, 102))
-ax4.set_title('Airport')
+ax4.set_title('Enviromental Group')
 ax4.set_xlabel(strTitleX4)
 ax4.set_ylabel(strTitleY)
 ax4.grid()
@@ -245,11 +255,11 @@ ax4.legend()
 ax4.grid(linestyle = '--')
 
 #fig = plt.figure()
-ax5 = fig.add_subplot(2, 2, 5)
+ax5 = fig.add_subplot(2, 3, 5)
 ax5.plot(c5, p5, label='Preference curve', color='black')
-ax5.set_xlim((X_POINTS_5[0], X_POINTS_5[-1]))
+ax5.set_xlim((X_POINTS_Profit[0], X_POINTS_Profit[-1]))
 ax5.set_ylim((0, 102))
-ax5.set_title('Lantis')
+ax5.set_title('Contractors')
 ax5.set_xlabel(strTitleX5)
 ax5.set_ylabel(strTitleY)
 ax5.grid()
@@ -275,11 +285,11 @@ colours = ['orange', 'green']
 fig = plt.figure(figsize=(12, 8))
 
 # Creating four subplots for the four preference scores
-ax1 = fig.add_subplot(2, 2, 1)
-ax2 = fig.add_subplot(2, 2, 2)
-ax3 = fig.add_subplot(2, 2, 3)
-ax4 = fig.add_subplot(2, 2, 4)
-ax5 = fig.add_subplot(2, 2, 5)
+ax1 = fig.add_subplot(2, 3, 1)
+ax2 = fig.add_subplot(2, 3, 2)
+ax3 = fig.add_subplot(2, 3, 3)
+ax4 = fig.add_subplot(2, 3, 4)
+ax5 = fig.add_subplot(2, 3, 5)
 
  # Already defined above
 # # Create arrays for plotting continuous preference curves
@@ -310,7 +320,7 @@ for i in range(2):
         'r_cross': 0.8,
         'max_stall': 8,
         'aggregation': paradigm[i],  # minmax or a_fine
-        "var_type_mixed": ["int", "int", "real", "real"],
+        "var_type_mixed": ["int", "int", "real", "real", "real", "real", "real", "real", "real"],
     }
 
     # Run the GA and print its result
@@ -327,20 +337,20 @@ for i in range(2):
 
     # todo: calculate the individual preference scores for the results
     # Calculate individual preference scores for the results
-    c1_res = calculate_cost(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3])
+    c1_res = calculate_cost(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3], design_variables_IMAP[4], design_variables_IMAP[5], design_variables_IMAP[6], design_variables_IMAP[7], design_variables_IMAP[8])
     p1_res = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, c1_res)
 
-    c2_res = calculate_capacity(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3])
+    c2_res = calculate_capacity(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3], design_variables_IMAP[4], design_variables_IMAP[5], design_variables_IMAP[6], design_variables_IMAP[7], design_variables_IMAP[8])
     p2_res = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, c2_res)
 
-    c3_res = design_variables_IMAP[2]
-    p3_res = pchip_interpolate(X_POINTS_3, P_POINTS_3, c3_res)
+    c3_res = calculate_construction_time(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3], design_variables_IMAP[4], design_variables_IMAP[5], design_variables_IMAP[6], design_variables_IMAP[7], design_variables_IMAP[8])  
+    p3_res = pchip_interpolate(X_POINTS_ConsTime, P_POINTS_ConsTime, c3_res)
 
-    c4_res = design_variables_IMAP[3]
-    p4_res = pchip_interpolate(X_POINTS_4, P_POINTS_4, c4_res)
+    c4_res = calculate_CO2_emissions(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3], design_variables_IMAP[4], design_variables_IMAP[5], design_variables_IMAP[6], design_variables_IMAP[7], design_variables_IMAP[8])
+    p4_res = pchip_interpolate(X_POINTS_CO2, P_POINTS_CO2, c4_res)
 
-    c5_res = design_variables_IMAP[4]
-    p5_res = pchip_interpolate(X_POINTS_5, P_POINTS_5, c5_res)
+    c5_res = calculate_profit(design_variables_IMAP[0], design_variables_IMAP[1], design_variables_IMAP[2], design_variables_IMAP[3], design_variables_IMAP[4], design_variables_IMAP[5], design_variables_IMAP[6], design_variables_IMAP[7], design_variables_IMAP[8])
+    p5_res = pchip_interpolate(X_POINTS_Profit, P_POINTS_Profit, c5_res)
 
     # Debugging prints to check calculated values
     print(f"c1_res: {c1_res}, p1_res: {p1_res}")
