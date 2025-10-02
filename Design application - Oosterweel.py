@@ -17,80 +17,103 @@ from scipy.optimize import fsolve
 
 from genetic_algorithm_pfm import GeneticAlgorithm
 
-w1 = 0.5   #City of Antwerp
-w2 = 0.5   #Lantis(Project manager)
-w3 = 0.0   #Inhabitants
-w4 = 0.0   #Enviromental Group
-w5 = 0.25   #Contractor(Not used currently)
+w1 = 0.2   #City of Antwerp
+w2 = 0.2   #Inhabitants
+w3 = 0.2   #Lantis(Project manager)
+w4 = 0.2   #Enviromental Group
+w5 = 0.2   #Contractor
 
 # todo: change the points and preference scores according to the case at hand
 # The Preference scores (p_points) and corresponding Objective results (x_points)
 X_POINTS_COST, P_POINTS_COST = [[150, 575, 1000], [100, 60, 0]]         #Cost (M€)
-X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[2, 4, 10], [0, 50, 100]]       #Capacity (k)
-X_POINTS_3, P_POINTS_3 = [[20, 30, 40], [0, 70, 100]]                    #Distance (km)
-X_POINTS_4, P_POINTS_4 = [[6, 8, 10], [0, 20, 100]]
+X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[2, 4, 10], [0, 50, 100]]       #Capacity
+X_POINTS_ConsTime, P_POINTS_ConsTime = [[20, 30, 40], [0, 70, 100]]     #Construction time (years)
+X_POINTS_CO2, P_POINTS_CO2 = [[6, 8, 10], [0, 20, 100]]                 #CO2 emissions (ton)   
+X_POINTS_Profit, P_POINTS_Profit = [[100, 300, 500], [100, 50, 0]]      #Profit (M€)
 
 # todo: change the bounds according to the case at hand
 # set bounds for all variables
-b1 = [1500, 2000]        #Tunnel Length(m) X1
-b2 = [2, 10]             #Lanes X2
-b3 = [20, 40]       #Distance(km) X3
-b4 = [6, 10]        #Lanes X4
-bounds = [b1, b2, b3, b4]
+b1 = [1500, 2000]       #Tunnel Length(m) X1
+b2 = [4, 12]            #Lanes X2
+b3 = [4.5, 5.0]         #Height(m) X3
+b4 = [1.2, 1.5]         #Thickness(m) X4
+b5 = [2.8, 3.7]         #Lane width(m) X5
+b6 = [50, 100]          #Speed limit(km/h) X6
+b7 = [20, 200]          #Density X7
+b8 = [1, 10]            #Number of machines X8
+b9 = [0.01, 1.0]        #Politian factor X9
+bounds = [b1, b2, b3, b4, b5, b6, b7, b8, b9]
 
 # todo: change the variable names according to the case at hand
 strCost = 'Cost'
 strCapacity = 'Capacity'
 str3 = 'Distance'
 str4 = 'Flight movements'
+str5 = 'Construction time'
 strTitleXCost = strCost + ' (M€)'
 strTitleXCapacity = strCapacity + ' (k)'
 strTitleX3 = str3 + ' (km)'
 strTitleX4 = str4 + ' (x100k)'
+strTitleX5 = str5 + ' (days)'
 strTitleY = 'Preference score'
 
-def calculate_cost(x1, x2, x3, x4):
+def calculate_cost(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     return x1 * x2 * 0.05  # in M€
-def calculate_capacity(x1, x2, x3, x4):
-    return x2  # in k
+def calculate_capacity(x1, x2, x3, x4, x5, x6, x7, x8, x9):
+    return x2 * x7 * x6
+def calculate_construction_time(x1, x2, x3, x4, x5, x6, x7, x8, x9):
+    return x1 * x2 / (x8 * x9)
+def calculate_CO2_emissions(x1, x2, x3, x4, x5, x6, x7, x8, x9):
+    return x1 * (x3 + 2 * x4) * (x2 * x5 + 2 * x4) * 20000
+def calculate_profit(x1, x2, x3, x4, x5, x6, x7, x8, x9):
+    return calculate_cost(x1, x2, x3, x4, x5, x6, x7, x8, x9) * 0.2
 
-def objective_p1(x1, x2, x3, x4):
+def objective_p1(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     """
     Objective to minimize the cost.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (calculate_cost(x1, x2, x3, x4)))
+    return pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (calculate_cost(x1, x2, x3, x4, x5, x6, x7, x8, x9)))
 
 
-def objective_p2(x1, x2, x3, x4):
+def objective_p2(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     """
     Objective to maximize the capacity.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, (calculate_capacity(x1, x2, x3, x4)))
+    return pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, (calculate_capacity(x1, x2, x3, x4, x5, x6, x7, x8, x9)))
 
 
-def objective_p3(x1, x2, x3, x4):
+def objective_p3(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     """
     Objective to maximize the shopping potential preference.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_3, P_POINTS_3, (x3))
+    return pchip_interpolate(X_POINTS_ConsTime, P_POINTS_ConsTime, (calculate_construction_time(x1, x2, x3, x4, x5, x6, x7, x8, x9)))
 
-def objective_p4(x1, x2, x3, x4):
+def objective_p4(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     """
     Objective to maximize the shopping potential preference.
 
     :param x1: 1st design variable
     :param x2: 2nd design variable
     """
-    return pchip_interpolate(X_POINTS_4, P_POINTS_4, (x4))
+    return pchip_interpolate(X_POINTS_, P_POINTS_4, (x4))
+
+def objective_p5(x1, x2, x3, x4):
+    """
+    Objective to maximize the shopping potential preference.
+
+    :param x1: 1st design variable
+    :param x2: 2nd design variable
+    """
+    return pchip_interpolate(X_POINTS_5, P_POINTS_5, (x5))
 
 def objective(variables):
     """
@@ -105,15 +128,17 @@ def objective(variables):
     x2 = variables[:, 1]
     x3 = variables[:, 2]
     x4 = variables[:, 3]
+    x5 = variables[:, 4]
 
     # calculate the preference scores
     p_1 = objective_p1(x1, x2, x3, x4)
     p_2 = objective_p2(x1, x2, x3, x4)
     p_3 = objective_p3(x1, x2, x3, x4)
     p_4 = objective_p4(x1, x2, x3, x4)
+    p_5 = objective_p5(x1, x2, x3, x4)
 
     # aggregate preference scores and return this to the GA
-    return [w1, w2, w3, w4], [p_1, p_2, p_3, p_4]
+    return [w1, w2, w3, w4, w5], [p_1, p_2, p_3, p_4, p_5]
 
 # todo: change the constraints according to the case at hand
 def constraint_1(variables):
@@ -126,6 +151,7 @@ def constraint_1(variables):
     x2 = variables[:, 1]
     x3 = variables[:, 2]
     x4 = variables[:, 3]
+    x5 = variables[:, 4]
     # Capacity should be no more than 6 times the cost
     return x2 * 6 - x1  # < 0
 
@@ -139,11 +165,12 @@ def constraint_2(variables):
     x2 = variables[:, 1]
     x3 = variables[:, 2]
     x4 = variables[:, 3]
+    x5 = variables[:, 4]
 
     return 15 + 0.15*(x4 - 6) + 0.2*(x3-10) - x1  # < 0
 
 
-# define list with constraints
+# todo: define list with constraints
 #cons = [['ineq', constraint_1], ['ineq', constraint_2]]
 cons = []
 
@@ -152,12 +179,14 @@ c1 = np.linspace(X_POINTS_COST[0], X_POINTS_COST[-1])
 c2 = np.linspace(X_POINTS_CAPACITY[0], X_POINTS_CAPACITY[-1])
 c3 = np.linspace(X_POINTS_3[0], X_POINTS_3[-1])
 c4 = np.linspace(X_POINTS_4[0], X_POINTS_4[-1])
+c5 = np.linspace(X_POINTS_5[0], X_POINTS_5[-1])
 
 # calculate the preference functions
 p1 = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, (c1))
 p2 = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, (c2))
 p3 = pchip_interpolate(X_POINTS_3, P_POINTS_3, (c3))
 p4 = pchip_interpolate(X_POINTS_4, P_POINTS_4, (c4))
+p5 = pchip_interpolate(X_POINTS_5, P_POINTS_5, (c5))
 
 # create figure that plots all preference curves and the preference scores of the returned results of the GA
 fig = plt.figure(figsize=((10,10)))
@@ -215,8 +244,23 @@ ax4.grid()
 ax4.legend()
 ax4.grid(linestyle = '--')
 
+#fig = plt.figure()
+ax5 = fig.add_subplot(2, 2, 5)
+ax5.plot(c5, p5, label='Preference curve', color='black')
+ax5.set_xlim((X_POINTS_5[0], X_POINTS_5[-1]))
+ax5.set_ylim((0, 102))
+ax5.set_title('Lantis')
+ax5.set_xlabel(strTitleX5)
+ax5.set_ylabel(strTitleY)
+ax5.grid()
+ax5.legend()
+ax5.grid(linestyle = '--')
+
 ax1.legend()
 ax2.legend()
+ax3.legend()
+ax4.legend()
+ax5.legend()
 fig.tight_layout()
 
 #Two  lines to make our compiler able to draw:
@@ -235,6 +279,7 @@ ax1 = fig.add_subplot(2, 2, 1)
 ax2 = fig.add_subplot(2, 2, 2)
 ax3 = fig.add_subplot(2, 2, 3)
 ax4 = fig.add_subplot(2, 2, 4)
+ax5 = fig.add_subplot(2, 2, 5)
 
  # Already defined above
 # # Create arrays for plotting continuous preference curves
@@ -254,6 +299,7 @@ ax1.plot(c1, p1, label='Preference curve', color='black')
 ax2.plot(c2, p2, label='Preference curve', color='black')
 ax3.plot(c3, p3, label='Preference curve', color='black')
 ax4.plot(c4, p4, label='Preference curve', color='black')
+ax5.plot(c5, p5, label='Preference curve', color='black')
 
 for i in range(2):
     # Dictionary with parameter settings for the GA run with the IMAP solver
@@ -273,10 +319,11 @@ for i in range(2):
     score_IMAP, design_variables_IMAP, _ = ga.run()
 
     # Print the optimal result in a readable format
-    print(f'Optimal result for x1 = {round(design_variables_IMAP[0], 2)} meters in length and '
+    print(f'Optimal method {paradigm[i]}, result for x1 = {round(design_variables_IMAP[0], 2)} meters in length and '
           f'x2 = {round(design_variables_IMAP[1], 2)} lanes and '
           f'x3 = {round(design_variables_IMAP[2], 2)} kilometers and '
-          f'x4 = {round(design_variables_IMAP[3], 2)} flight movements')
+          f'x4 = {round(design_variables_IMAP[3], 2)} flight movements'
+          f'x5 = {round(design_variables_IMAP[4], 2)} days')
 
     # todo: calculate the individual preference scores for the results
     # Calculate individual preference scores for the results
@@ -292,23 +339,29 @@ for i in range(2):
     c4_res = design_variables_IMAP[3]
     p4_res = pchip_interpolate(X_POINTS_4, P_POINTS_4, c4_res)
 
+    c5_res = design_variables_IMAP[4]
+    p5_res = pchip_interpolate(X_POINTS_5, P_POINTS_5, c5_res)
+
     # Debugging prints to check calculated values
     print(f"c1_res: {c1_res}, p1_res: {p1_res}")
     print(f"c2_res: {c2_res}, p2_res: {p2_res}")
     print(f"c3_res: {c3_res}, p3_res: {p3_res}")
     print(f"c4_res: {c4_res}, p4_res: {p4_res}")
+    print(f"c5_res: {c5_res}, p5_res: {p5_res}")
 
     # Plot the results on the preference curve subplots
     ax1.scatter(c1_res, p1_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
     ax2.scatter(c2_res, p2_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
     ax3.scatter(c3_res, p3_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
     ax4.scatter(c4_res, p4_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
+    ax5.scatter(c5_res, p5_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
 
 # Add legends and set titles for each subplot
 ax1.legend()
 ax2.legend()
 ax3.legend()
 ax4.legend()
+ax5.legend()
 
 ax1.set_title('Optimal Solution for ' + strCost + ' (x1)')
 ax1.set_xlabel(strTitleXCost)
@@ -325,6 +378,10 @@ ax3.set_ylabel(strTitleY)
 ax4.set_title('Optimal Solution for ' + str4 + ' (x4)')
 ax4.set_xlabel(strTitleX4)
 ax4.set_ylabel(strTitleY)
+
+ax5.set_title('Optimal Solution for ' + str5 + ' (x5)')
+ax5.set_xlabel(strTitleX5)
+ax5.set_ylabel(strTitleY)
 
 # Adjust the layout
 fig.tight_layout()
