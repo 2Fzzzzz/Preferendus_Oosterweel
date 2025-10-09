@@ -387,7 +387,7 @@ for i in range(2):
         'r_cross': 0.8,
         'max_stall': 8,
         'aggregation': paradigm[i],  # minmax or a_fine
-        "var_type_mixed": ["int", "int", "real", "real", "real", "real", "real", "real", "real"],
+        "var_type_mixed": ["int", "int", "real", "real", "real", "int", "real", "int", "real"],
     }
 
     # Run the GA and print its result
