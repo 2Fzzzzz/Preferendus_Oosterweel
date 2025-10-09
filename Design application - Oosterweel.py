@@ -398,9 +398,13 @@ for i in range(2):
     # Print the optimal result in a readable format
     print(f'Optimal method {paradigm[i]}, result for x1 = {round(design_variables_IMAP[0], 2)} meters in length and '
           f'x2 = {round(design_variables_IMAP[1], 2)} lanes and '
-          f'x3 = {round(design_variables_IMAP[2], 2)} kilometers and '
-          f'x4 = {round(design_variables_IMAP[3], 2)} flight movements'
-          f'x5 = {round(design_variables_IMAP[4], 2)} days')
+          f'x3 = {round(design_variables_IMAP[2], 2)} meters in height and '
+          f'x4 = {round(design_variables_IMAP[3], 2)} meters in thickness and '
+          f'x5 = {round(design_variables_IMAP[4], 2)} meters in lane width and '
+          f'x6 = {round(design_variables_IMAP[5], 2)} km/h in speed limit and '
+          f'x7 = {round(design_variables_IMAP[6], 2)} cars/km in density and '
+          f'x8 = {round(design_variables_IMAP[7], 2)} machines and '
+          f'x9 = {round(design_variables_IMAP[8], 2)} in politian factor.')
 
     # todo: calculate the individual preference scores for the results
     # Calculate individual preference scores for the results
