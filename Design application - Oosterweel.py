@@ -17,11 +17,11 @@ from scipy.optimize import fsolve
 
 from genetic_algorithm_pfm import GeneticAlgorithm
 
-w1 = 0.2   #City of Antwerp
-w2 = 0.2   #Inhabitants
-w3 = 0.2   #Lantis(Project manager)
-w4 = 0.2   #Enviromental Group
-w5 = 0.2   #Contractor
+w1 = 1   #City of Antwerp
+w2 = 0   #Inhabitants
+w3 = 0   #Lantis(Project manager)
+w4 = 0   #Enviromental Group
+w5 = 0   #Contractor
 
 # todo: change the points and preference scores according to the case at hand
 # The Preference scores (p_points) and corresponding Objective results (x_points)
@@ -159,8 +159,8 @@ def constraint_Speed(variables):
     x7 = variables[:, 6]
     x8 = variables[:, 7]
     x9 = variables[:, 8]
-    # Speed limit should be at least 10 times the number of lanes
-    return x6 - x2 * 10 # < 0
+    # Speed limit should be at least 13 times the number of lanes
+    return x6 - x2 * 13 # < 0
 
 def constraint_HeightWidth(variables):
     """
@@ -248,6 +248,7 @@ def constraint_LanesDensity(variables):
     return 10000 / x2**3 - x7 # < 0
 
 # todo: define list with constraints
+#cons = []
 cons = [['ineq', constraint_Speed], ['ineq', constraint_HeightWidth], ['ineq', constraint_WidthSpeed], ['ineq', constraint_WidthThicknessHeight]
         , ['ineq', constraint_DensitySpeed], ['ineq', constraint_LanesDensity]]
 
