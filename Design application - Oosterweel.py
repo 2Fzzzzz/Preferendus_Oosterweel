@@ -25,23 +25,23 @@ w5 = 0.2   #Contractor
 
 # todo: change the points and preference scores according to the case at hand
 # The Preference scores (p_points) and corresponding Objective results (x_points)
-X_POINTS_COST, P_POINTS_COST = [[150, 575, 1000], [100, 60, 0]]         #Cost (M€)
-X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[2, 4, 10], [0, 50, 100]]       #Capacity
-X_POINTS_ConsTime, P_POINTS_ConsTime = [[1, 30, 50], [0, 70, 100]]     #Construction time (years)
-X_POINTS_CO2, P_POINTS_CO2 = [[10, 800, 1000], [0, 20, 100]]                 #CO2 emissions (ton)   
-X_POINTS_Profit, P_POINTS_Profit = [[100, 300, 500], [100, 50, 0]]      #Profit (M€)
+X_POINTS_COST, P_POINTS_COST = [[300, 325, 600], [100, 60, 0]]         #Cost (M€)
+X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[4000, 60000, 120000], [0, 50, 100]]       #Capacity
+X_POINTS_ConsTime, P_POINTS_ConsTime = [[6.8, 12, 27.1], [100, 40, 0]]     #Construction time
+X_POINTS_CO2, P_POINTS_CO2 = [[140760, 272000, 403200], [100, 30, 0]]                 #CO2 emissions (ton)   
+X_POINTS_Profit, P_POINTS_Profit = [[60, 90, 120], [0, 40, 100]]      #Profit (M€)
 
 # todo: change the bounds according to the case at hand
 # set bounds for all variables
 b1 = [1500, 2000]       #Tunnel Length(m) X1
-b2 = [4, 12]            #Lanes X2
+b2 = [4, 6]             #Lanes X2
 b3 = [4.5, 5.0]         #Height(m) X3
 b4 = [1.2, 1.5]         #Thickness(m) X4
 b5 = [2.8, 3.7]         #Lane width(m) X5
 b6 = [50, 100]          #Speed limit(km/h) X6
-b7 = [20, 200]          #Density X7
+b7 = [20, 200]          #Density(cars/km) X7
 b8 = [1, 10]            #Number of machines X8
-b9 = [0.01, 1.0]        #Politian factor X9
+b9 = [0.2, 1.0]         #Politian factor X9
 bounds = [b1, b2, b3, b4, b5, b6, b7, b8, b9]
 
 # todo: change the variable names according to the case at hand
@@ -62,9 +62,9 @@ def calculate_cost(x1, x2, x3, x4, x5, x6, x7, x8, x9):
 def calculate_capacity(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     return x2 * x7 * x6
 def calculate_construction_time(x1, x2, x3, x4, x5, x6, x7, x8, x9):
-    return x1 * x2 / (x8 * x9)
+    return (x1 * x2 / (x8 * x9)) ** 0.3
 def calculate_CO2_emissions(x1, x2, x3, x4, x5, x6, x7, x8, x9):
-    return x1 * (x3 + 2 * x4) * (x2 * x5 + 2 * x4) * 20000
+    return x1 * (x3 + 2 * x4) * (x2 * x5 + 2 * x4)
 def calculate_profit(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     return calculate_cost(x1, x2, x3, x4, x5, x6, x7, x8, x9) * 0.2
 
@@ -179,10 +179,77 @@ def constraint_HeightWidth(variables):
     # Height should be at least 0.04 times the total width
     return 0.04 * (x2 * x5) - x4 # < 0
 
+def constraint_WidthSpeed(variables):
+    """
+    :param variables: ndarray of n-by-m, with n the population size of the GA and m the number of variables.
+    :return: list with scores of the constraint
+    """
+    x1 = variables[:, 0]
+    x2 = variables[:, 1]
+    x3 = variables[:, 2]
+    x4 = variables[:, 3]
+    x5 = variables[:, 4]
+    x6 = variables[:, 5]
+    x7 = variables[:, 6]
+    x8 = variables[:, 7]
+    x9 = variables[:, 8]
+    # Total width should be less than speed limit
+    return x2 * x5 - x6 # < 0
 
+def constraint_WidthThicknessHeight(variables):
+    """
+    :param variables: ndarray of n-by-m, with n the population size of the GA and m the number of variables.
+    :return: list with scores of the constraint
+    """
+    x1 = variables[:, 0]
+    x2 = variables[:, 1]
+    x3 = variables[:, 2]
+    x4 = variables[:, 3]
+    x5 = variables[:, 4]
+    x6 = variables[:, 5]
+    x7 = variables[:, 6]
+    x8 = variables[:, 7]
+    x9 = variables[:, 8]
+    # Lane Width plus Thickness should be less than Height
+    return x4 + x5 - x3 # < 0
+
+def constraint_DensitySpeed(variables):
+    """
+    :param variables: ndarray of n-by-m, with n the population size of the GA and m the number of variables.
+    :return: list with scores of the constraint
+    """
+    x1 = variables[:, 0]
+    x2 = variables[:, 1]
+    x3 = variables[:, 2]
+    x4 = variables[:, 3]
+    x5 = variables[:, 4]
+    x6 = variables[:, 5]
+    x7 = variables[:, 6]
+    x8 = variables[:, 7]
+    x9 = variables[:, 8]
+    # Politian factor should be less than 0.1 times the number of lanes
+    return 2000 / x7 - x6 # < 0
+
+def constraint_LanesDensity(variables):
+    """
+    :param variables: ndarray of n-by-m, with n the population size of the GA and m the number of variables.
+    :return: list with scores of the constraint
+    """
+    x1 = variables[:, 0]
+    x2 = variables[:, 1]
+    x3 = variables[:, 2]
+    x4 = variables[:, 3]
+    x5 = variables[:, 4]
+    x6 = variables[:, 5]
+    x7 = variables[:, 6]
+    x8 = variables[:, 7]
+    x9 = variables[:, 8]
+    # Number of Density should be less than 10000 / (Lanes^3)
+    return 10000 / x2**3 - x7 # < 0
 
 # todo: define list with constraints
-cons = [['ineq', constraint_Speed], ['ineq', constraint_HeightWidth]]
+cons = [['ineq', constraint_Speed], ['ineq', constraint_HeightWidth], ['ineq', constraint_WidthSpeed], ['ineq', constraint_WidthThicknessHeight]
+        , ['ineq', constraint_DensitySpeed], ['ineq', constraint_LanesDensity]]
 
 # create arrays for plotting continuous preference curves
 c1 = np.linspace(X_POINTS_COST[0], X_POINTS_COST[-1])
