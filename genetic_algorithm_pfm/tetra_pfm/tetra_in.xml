@@ -1497,18 +1497,6 @@
   <Alternative Name="A496" Type="0">
     <Comment />
       </Alternative>
-  <Alternative Name="A497" Type="0">
-    <Comment />
-      </Alternative>
-  <Alternative Name="A498" Type="0">
-    <Comment />
-      </Alternative>
-  <Alternative Name="A499" Type="0">
-    <Comment />
-      </Alternative>
-  <Alternative Name="A500" Type="0">
-    <Comment />
-      </Alternative>
   <Criterion Name="Criteria" IsPreferenceIncreasing="1">
     <Comment />
     <Criterion Name="C1" IsPreferenceIncreasing="1">
@@ -1519,10 +1507,10 @@
         <RulerValue Name="A2" Value="98.60609324950232" />
         <RulerValue Name="A3" Value="37.36066917014635" />
         <RulerValue Name="A4" Value="94.57980574647888" />
-        <RulerValue Name="A5" Value="8.957843255753922" />
-        <RulerValue Name="A6" Value="9.29222252674576" />
-        <RulerValue Name="A7" Value="76.7183028561399" />
-        <RulerValue Name="A8" Value="93.82298121046857" />
+        <RulerValue Name="A5" Value="98.60609324950232" />
+        <RulerValue Name="A6" Value="98.60609324950232" />
+        <RulerValue Name="A7" Value="98.60609324950232" />
+        <RulerValue Name="A8" Value="98.60609324950232" />
         <RulerValue Name="A9" Value="98.60609324950232" />
         <RulerValue Name="A10" Value="98.60609324950232" />
         <RulerValue Name="A11" Value="98.60609324950232" />
@@ -1572,11 +1560,11 @@
         <RulerValue Name="A55" Value="98.60609324950232" />
         <RulerValue Name="A56" Value="98.60609324950232" />
         <RulerValue Name="A57" Value="98.60609324950232" />
-        <RulerValue Name="A58" Value="98.60609324950232" />
+        <RulerValue Name="A58" Value="38.103741795578884" />
         <RulerValue Name="A59" Value="98.60609324950232" />
         <RulerValue Name="A60" Value="98.60609324950232" />
         <RulerValue Name="A61" Value="98.60609324950232" />
-        <RulerValue Name="A62" Value="38.103741795578884" />
+        <RulerValue Name="A62" Value="98.60609324950232" />
         <RulerValue Name="A63" Value="98.60609324950232" />
         <RulerValue Name="A64" Value="98.60609324950232" />
         <RulerValue Name="A65" Value="98.60609324950232" />
@@ -1614,14 +1602,14 @@
         <RulerValue Name="A97" Value="98.60609324950232" />
         <RulerValue Name="A98" Value="98.60609324950232" />
         <RulerValue Name="A99" Value="98.60609324950232" />
-        <RulerValue Name="A100" Value="98.60609324950232" />
+        <RulerValue Name="A100" Value="38.103741795578884" />
         <RulerValue Name="A101" Value="98.60609324950232" />
         <RulerValue Name="A102" Value="98.60609324950232" />
-        <RulerValue Name="A103" Value="98.60609324950232" />
-        <RulerValue Name="A104" Value="38.103741795578884" />
+        <RulerValue Name="A103" Value="38.103741795578884" />
+        <RulerValue Name="A104" Value="98.60609324950232" />
         <RulerValue Name="A105" Value="98.60609324950232" />
         <RulerValue Name="A106" Value="98.60609324950232" />
-        <RulerValue Name="A107" Value="38.103741795578884" />
+        <RulerValue Name="A107" Value="98.60609324950232" />
         <RulerValue Name="A108" Value="98.60609324950232" />
         <RulerValue Name="A109" Value="98.60609324950232" />
         <RulerValue Name="A110" Value="98.60609324950232" />
@@ -1772,11 +1760,11 @@
         <RulerValue Name="A255" Value="98.60609324950232" />
         <RulerValue Name="A256" Value="98.60609324950232" />
         <RulerValue Name="A257" Value="98.60609324950232" />
-        <RulerValue Name="A258" Value="98.60609324950232" />
+        <RulerValue Name="A258" Value="78.60366798570028" />
         <RulerValue Name="A259" Value="98.60609324950232" />
         <RulerValue Name="A260" Value="98.60609324950232" />
         <RulerValue Name="A261" Value="98.60609324950232" />
-        <RulerValue Name="A262" Value="78.60366798570028" />
+        <RulerValue Name="A262" Value="98.60609324950232" />
         <RulerValue Name="A263" Value="98.60609324950232" />
         <RulerValue Name="A264" Value="98.60609324950232" />
         <RulerValue Name="A265" Value="98.60609324950232" />
@@ -1873,11 +1861,11 @@
         <RulerValue Name="A356" Value="98.60609324950232" />
         <RulerValue Name="A357" Value="98.60609324950232" />
         <RulerValue Name="A358" Value="98.60609324950232" />
-        <RulerValue Name="A359" Value="98.60609324950232" />
+        <RulerValue Name="A359" Value="72.74682975582068" />
         <RulerValue Name="A360" Value="98.60609324950232" />
         <RulerValue Name="A361" Value="98.60609324950232" />
         <RulerValue Name="A362" Value="98.60609324950232" />
-        <RulerValue Name="A363" Value="72.74682975582068" />
+        <RulerValue Name="A363" Value="98.60609324950232" />
         <RulerValue Name="A364" Value="98.60609324950232" />
         <RulerValue Name="A365" Value="98.60609324950232" />
         <RulerValue Name="A366" Value="98.60609324950232" />
@@ -2005,16 +1993,12 @@
         <RulerValue Name="A488" Value="98.60609324950232" />
         <RulerValue Name="A489" Value="98.60609324950232" />
         <RulerValue Name="A490" Value="98.60609324950232" />
-        <RulerValue Name="A491" Value="98.60609324950232" />
+        <RulerValue Name="A491" Value="77.46743414264787" />
         <RulerValue Name="A492" Value="98.60609324950232" />
         <RulerValue Name="A493" Value="98.60609324950232" />
         <RulerValue Name="A494" Value="98.60609324950232" />
-        <RulerValue Name="A495" Value="77.46743414264787" />
+        <RulerValue Name="A495" Value="98.60609324950232" />
         <RulerValue Name="A496" Value="98.60609324950232" />
-        <RulerValue Name="A497" Value="98.60609324950232" />
-        <RulerValue Name="A498" Value="98.60609324950232" />
-        <RulerValue Name="A499" Value="98.60609324950232" />
-        <RulerValue Name="A500" Value="98.60609324950232" />
       </Measurement>
     </Criterion>
     <Criterion Name="C2" IsPreferenceIncreasing="1">
@@ -2025,18 +2009,18 @@
         <RulerValue Name="A2" Value="33.8114785780584" />
         <RulerValue Name="A3" Value="33.8114785780584" />
         <RulerValue Name="A4" Value="33.8114785780584" />
-        <RulerValue Name="A5" Value="35.67483329285222" />
-        <RulerValue Name="A6" Value="50.53882845587579" />
-        <RulerValue Name="A7" Value="25.05687548916075" />
-        <RulerValue Name="A8" Value="1.7676752560114997" />
+        <RulerValue Name="A5" Value="33.8114785780584" />
+        <RulerValue Name="A6" Value="33.8114785780584" />
+        <RulerValue Name="A7" Value="33.8114785780584" />
+        <RulerValue Name="A8" Value="33.8114785780584" />
         <RulerValue Name="A9" Value="33.8114785780584" />
         <RulerValue Name="A10" Value="33.8114785780584" />
         <RulerValue Name="A11" Value="33.8114785780584" />
-        <RulerValue Name="A12" Value="33.8114785780584" />
+        <RulerValue Name="A12" Value="29.666491229117455" />
         <RulerValue Name="A13" Value="33.8114785780584" />
         <RulerValue Name="A14" Value="33.8114785780584" />
         <RulerValue Name="A15" Value="33.8114785780584" />
-        <RulerValue Name="A16" Value="29.666491229117455" />
+        <RulerValue Name="A16" Value="33.8114785780584" />
         <RulerValue Name="A17" Value="33.8114785780584" />
         <RulerValue Name="A18" Value="33.8114785780584" />
         <RulerValue Name="A19" Value="33.8114785780584" />
@@ -2054,35 +2038,35 @@
         <RulerValue Name="A31" Value="33.8114785780584" />
         <RulerValue Name="A32" Value="33.8114785780584" />
         <RulerValue Name="A33" Value="33.8114785780584" />
-        <RulerValue Name="A34" Value="33.8114785780584" />
+        <RulerValue Name="A34" Value="25.498014737239163" />
         <RulerValue Name="A35" Value="33.8114785780584" />
         <RulerValue Name="A36" Value="33.8114785780584" />
         <RulerValue Name="A37" Value="33.8114785780584" />
-        <RulerValue Name="A38" Value="25.498014737239163" />
+        <RulerValue Name="A38" Value="33.8114785780584" />
         <RulerValue Name="A39" Value="33.8114785780584" />
         <RulerValue Name="A40" Value="33.8114785780584" />
         <RulerValue Name="A41" Value="33.8114785780584" />
         <RulerValue Name="A42" Value="33.8114785780584" />
         <RulerValue Name="A43" Value="33.8114785780584" />
         <RulerValue Name="A44" Value="33.8114785780584" />
-        <RulerValue Name="A45" Value="33.8114785780584" />
+        <RulerValue Name="A45" Value="31.741942015233143" />
         <RulerValue Name="A46" Value="33.8114785780584" />
         <RulerValue Name="A47" Value="33.8114785780584" />
         <RulerValue Name="A48" Value="33.8114785780584" />
-        <RulerValue Name="A49" Value="31.741942015233143" />
+        <RulerValue Name="A49" Value="33.8114785780584" />
         <RulerValue Name="A50" Value="33.8114785780584" />
         <RulerValue Name="A51" Value="33.8114785780584" />
         <RulerValue Name="A52" Value="33.8114785780584" />
         <RulerValue Name="A53" Value="33.8114785780584" />
         <RulerValue Name="A54" Value="33.8114785780584" />
-        <RulerValue Name="A55" Value="33.8114785780584" />
+        <RulerValue Name="A55" Value="29.666491229117455" />
         <RulerValue Name="A56" Value="33.8114785780584" />
         <RulerValue Name="A57" Value="33.8114785780584" />
-        <RulerValue Name="A58" Value="33.8114785780584" />
-        <RulerValue Name="A59" Value="29.666491229117455" />
+        <RulerValue Name="A58" Value="42.90490336121746" />
+        <RulerValue Name="A59" Value="33.8114785780584" />
         <RulerValue Name="A60" Value="33.8114785780584" />
         <RulerValue Name="A61" Value="33.8114785780584" />
-        <RulerValue Name="A62" Value="42.90490336121746" />
+        <RulerValue Name="A62" Value="33.8114785780584" />
         <RulerValue Name="A63" Value="33.8114785780584" />
         <RulerValue Name="A64" Value="33.8114785780584" />
         <RulerValue Name="A65" Value="33.8114785780584" />
@@ -2120,19 +2104,19 @@
         <RulerValue Name="A97" Value="33.8114785780584" />
         <RulerValue Name="A98" Value="33.8114785780584" />
         <RulerValue Name="A99" Value="33.8114785780584" />
-        <RulerValue Name="A100" Value="33.8114785780584" />
+        <RulerValue Name="A100" Value="42.90490336121746" />
         <RulerValue Name="A101" Value="33.8114785780584" />
         <RulerValue Name="A102" Value="33.8114785780584" />
-        <RulerValue Name="A103" Value="33.8114785780584" />
-        <RulerValue Name="A104" Value="42.90490336121746" />
+        <RulerValue Name="A103" Value="42.90490336121746" />
+        <RulerValue Name="A104" Value="33.8114785780584" />
         <RulerValue Name="A105" Value="33.8114785780584" />
         <RulerValue Name="A106" Value="33.8114785780584" />
-        <RulerValue Name="A107" Value="42.90490336121746" />
-        <RulerValue Name="A108" Value="33.8114785780584" />
+        <RulerValue Name="A107" Value="33.8114785780584" />
+        <RulerValue Name="A108" Value="29.666491229117455" />
         <RulerValue Name="A109" Value="33.8114785780584" />
         <RulerValue Name="A110" Value="33.8114785780584" />
         <RulerValue Name="A111" Value="33.8114785780584" />
-        <RulerValue Name="A112" Value="29.666491229117455" />
+        <RulerValue Name="A112" Value="33.8114785780584" />
         <RulerValue Name="A113" Value="33.8114785780584" />
         <RulerValue Name="A114" Value="33.8114785780584" />
         <RulerValue Name="A115" Value="33.8114785780584" />
@@ -2173,16 +2157,16 @@
         <RulerValue Name="A150" Value="33.8114785780584" />
         <RulerValue Name="A151" Value="33.8114785780584" />
         <RulerValue Name="A152" Value="33.8114785780584" />
-        <RulerValue Name="A153" Value="33.8114785780584" />
+        <RulerValue Name="A153" Value="33.10709895574231" />
         <RulerValue Name="A154" Value="33.8114785780584" />
         <RulerValue Name="A155" Value="33.8114785780584" />
         <RulerValue Name="A156" Value="33.8114785780584" />
-        <RulerValue Name="A157" Value="33.10709895574231" />
-        <RulerValue Name="A158" Value="33.8114785780584" />
+        <RulerValue Name="A157" Value="33.8114785780584" />
+        <RulerValue Name="A158" Value="25.498014737239163" />
         <RulerValue Name="A159" Value="33.8114785780584" />
         <RulerValue Name="A160" Value="33.8114785780584" />
         <RulerValue Name="A161" Value="33.8114785780584" />
-        <RulerValue Name="A162" Value="25.498014737239163" />
+        <RulerValue Name="A162" Value="33.8114785780584" />
         <RulerValue Name="A163" Value="33.8114785780584" />
         <RulerValue Name="A164" Value="33.8114785780584" />
         <RulerValue Name="A165" Value="33.8114785780584" />
@@ -2215,29 +2199,29 @@
         <RulerValue Name="A192" Value="33.8114785780584" />
         <RulerValue Name="A193" Value="33.8114785780584" />
         <RulerValue Name="A194" Value="33.8114785780584" />
-        <RulerValue Name="A195" Value="33.8114785780584" />
+        <RulerValue Name="A195" Value="25.498014737239163" />
         <RulerValue Name="A196" Value="33.8114785780584" />
         <RulerValue Name="A197" Value="33.8114785780584" />
         <RulerValue Name="A198" Value="33.8114785780584" />
-        <RulerValue Name="A199" Value="25.498014737239163" />
+        <RulerValue Name="A199" Value="33.8114785780584" />
         <RulerValue Name="A200" Value="33.8114785780584" />
         <RulerValue Name="A201" Value="33.8114785780584" />
-        <RulerValue Name="A202" Value="33.8114785780584" />
+        <RulerValue Name="A202" Value="33.55311137520399" />
         <RulerValue Name="A203" Value="33.8114785780584" />
         <RulerValue Name="A204" Value="33.8114785780584" />
         <RulerValue Name="A205" Value="33.8114785780584" />
-        <RulerValue Name="A206" Value="33.55311137520399" />
+        <RulerValue Name="A206" Value="33.8114785780584" />
         <RulerValue Name="A207" Value="33.8114785780584" />
         <RulerValue Name="A208" Value="33.8114785780584" />
         <RulerValue Name="A209" Value="33.8114785780584" />
         <RulerValue Name="A210" Value="33.8114785780584" />
         <RulerValue Name="A211" Value="33.8114785780584" />
         <RulerValue Name="A212" Value="33.8114785780584" />
-        <RulerValue Name="A213" Value="33.8114785780584" />
+        <RulerValue Name="A213" Value="33.68230660463851" />
         <RulerValue Name="A214" Value="33.8114785780584" />
         <RulerValue Name="A215" Value="33.8114785780584" />
         <RulerValue Name="A216" Value="33.8114785780584" />
-        <RulerValue Name="A217" Value="33.68230660463851" />
+        <RulerValue Name="A217" Value="33.8114785780584" />
         <RulerValue Name="A218" Value="33.8114785780584" />
         <RulerValue Name="A219" Value="33.8114785780584" />
         <RulerValue Name="A220" Value="33.8114785780584" />
@@ -2265,13 +2249,13 @@
         <RulerValue Name="A242" Value="33.8114785780584" />
         <RulerValue Name="A243" Value="33.8114785780584" />
         <RulerValue Name="A244" Value="33.8114785780584" />
-        <RulerValue Name="A245" Value="33.8114785780584" />
+        <RulerValue Name="A245" Value="31.741942015233143" />
         <RulerValue Name="A246" Value="33.8114785780584" />
-        <RulerValue Name="A247" Value="33.8114785780584" />
+        <RulerValue Name="A247" Value="17.091936326465614" />
         <RulerValue Name="A248" Value="33.8114785780584" />
-        <RulerValue Name="A249" Value="31.741942015233143" />
+        <RulerValue Name="A249" Value="33.8114785780584" />
         <RulerValue Name="A250" Value="33.8114785780584" />
-        <RulerValue Name="A251" Value="17.091936326465614" />
+        <RulerValue Name="A251" Value="33.8114785780584" />
         <RulerValue Name="A252" Value="33.8114785780584" />
         <RulerValue Name="A253" Value="33.8114785780584" />
         <RulerValue Name="A254" Value="33.8114785780584" />
@@ -2305,21 +2289,21 @@
         <RulerValue Name="A282" Value="33.8114785780584" />
         <RulerValue Name="A283" Value="33.8114785780584" />
         <RulerValue Name="A284" Value="33.8114785780584" />
-        <RulerValue Name="A285" Value="33.8114785780584" />
+        <RulerValue Name="A285" Value="25.498014737239163" />
         <RulerValue Name="A286" Value="33.8114785780584" />
         <RulerValue Name="A287" Value="33.8114785780584" />
         <RulerValue Name="A288" Value="33.8114785780584" />
-        <RulerValue Name="A289" Value="25.498014737239163" />
+        <RulerValue Name="A289" Value="33.8114785780584" />
         <RulerValue Name="A290" Value="33.8114785780584" />
         <RulerValue Name="A291" Value="33.8114785780584" />
         <RulerValue Name="A292" Value="33.8114785780584" />
         <RulerValue Name="A293" Value="33.8114785780584" />
         <RulerValue Name="A294" Value="33.8114785780584" />
-        <RulerValue Name="A295" Value="33.8114785780584" />
+        <RulerValue Name="A295" Value="29.666491229117455" />
         <RulerValue Name="A296" Value="33.8114785780584" />
         <RulerValue Name="A297" Value="33.8114785780584" />
         <RulerValue Name="A298" Value="33.8114785780584" />
-        <RulerValue Name="A299" Value="29.666491229117455" />
+        <RulerValue Name="A299" Value="33.8114785780584" />
         <RulerValue Name="A300" Value="33.8114785780584" />
         <RulerValue Name="A301" Value="33.8114785780584" />
         <RulerValue Name="A302" Value="33.8114785780584" />
@@ -2332,11 +2316,11 @@
         <RulerValue Name="A309" Value="33.8114785780584" />
         <RulerValue Name="A310" Value="33.8114785780584" />
         <RulerValue Name="A311" Value="33.8114785780584" />
-        <RulerValue Name="A312" Value="33.8114785780584" />
+        <RulerValue Name="A312" Value="25.498014737239163" />
         <RulerValue Name="A313" Value="33.8114785780584" />
         <RulerValue Name="A314" Value="33.8114785780584" />
         <RulerValue Name="A315" Value="33.8114785780584" />
-        <RulerValue Name="A316" Value="25.498014737239163" />
+        <RulerValue Name="A316" Value="33.8114785780584" />
         <RulerValue Name="A317" Value="33.8114785780584" />
         <RulerValue Name="A318" Value="33.8114785780584" />
         <RulerValue Name="A319" Value="33.8114785780584" />
@@ -2351,20 +2335,20 @@
         <RulerValue Name="A328" Value="33.8114785780584" />
         <RulerValue Name="A329" Value="33.8114785780584" />
         <RulerValue Name="A330" Value="33.8114785780584" />
-        <RulerValue Name="A331" Value="33.8114785780584" />
+        <RulerValue Name="A331" Value="37.32297428573561" />
         <RulerValue Name="A332" Value="33.8114785780584" />
         <RulerValue Name="A333" Value="33.8114785780584" />
         <RulerValue Name="A334" Value="33.8114785780584" />
-        <RulerValue Name="A335" Value="37.32297428573561" />
+        <RulerValue Name="A335" Value="33.8114785780584" />
         <RulerValue Name="A336" Value="33.8114785780584" />
-        <RulerValue Name="A337" Value="33.8114785780584" />
+        <RulerValue Name="A337" Value="17.091936326465614" />
         <RulerValue Name="A338" Value="33.8114785780584" />
         <RulerValue Name="A339" Value="33.8114785780584" />
-        <RulerValue Name="A340" Value="33.8114785780584" />
-        <RulerValue Name="A341" Value="17.091936326465614" />
+        <RulerValue Name="A340" Value="58.02781352042228" />
+        <RulerValue Name="A341" Value="33.8114785780584" />
         <RulerValue Name="A342" Value="33.8114785780584" />
         <RulerValue Name="A343" Value="33.8114785780584" />
-        <RulerValue Name="A344" Value="58.02781352042228" />
+        <RulerValue Name="A344" Value="33.8114785780584" />
         <RulerValue Name="A345" Value="33.8114785780584" />
         <RulerValue Name="A346" Value="33.8114785780584" />
         <RulerValue Name="A347" Value="33.8114785780584" />
@@ -2381,19 +2365,19 @@
         <RulerValue Name="A358" Value="33.8114785780584" />
         <RulerValue Name="A359" Value="33.8114785780584" />
         <RulerValue Name="A360" Value="33.8114785780584" />
-        <RulerValue Name="A361" Value="33.8114785780584" />
+        <RulerValue Name="A361" Value="33.68230660463851" />
         <RulerValue Name="A362" Value="33.8114785780584" />
         <RulerValue Name="A363" Value="33.8114785780584" />
         <RulerValue Name="A364" Value="33.8114785780584" />
-        <RulerValue Name="A365" Value="33.68230660463851" />
+        <RulerValue Name="A365" Value="33.8114785780584" />
         <RulerValue Name="A366" Value="33.8114785780584" />
         <RulerValue Name="A367" Value="33.8114785780584" />
         <RulerValue Name="A368" Value="33.8114785780584" />
-        <RulerValue Name="A369" Value="33.8114785780584" />
+        <RulerValue Name="A369" Value="25.498014737239163" />
         <RulerValue Name="A370" Value="33.8114785780584" />
         <RulerValue Name="A371" Value="33.8114785780584" />
         <RulerValue Name="A372" Value="33.8114785780584" />
-        <RulerValue Name="A373" Value="25.498014737239163" />
+        <RulerValue Name="A373" Value="33.8114785780584" />
         <RulerValue Name="A374" Value="33.8114785780584" />
         <RulerValue Name="A375" Value="33.8114785780584" />
         <RulerValue Name="A376" Value="33.8114785780584" />
@@ -2411,23 +2395,23 @@
         <RulerValue Name="A388" Value="33.8114785780584" />
         <RulerValue Name="A389" Value="33.8114785780584" />
         <RulerValue Name="A390" Value="33.8114785780584" />
-        <RulerValue Name="A391" Value="33.8114785780584" />
+        <RulerValue Name="A391" Value="32.77745219565432" />
         <RulerValue Name="A392" Value="33.8114785780584" />
         <RulerValue Name="A393" Value="33.8114785780584" />
-        <RulerValue Name="A394" Value="33.8114785780584" />
-        <RulerValue Name="A395" Value="32.77745219565432" />
+        <RulerValue Name="A394" Value="33.294651189245656" />
+        <RulerValue Name="A395" Value="33.8114785780584" />
         <RulerValue Name="A396" Value="33.8114785780584" />
         <RulerValue Name="A397" Value="33.8114785780584" />
-        <RulerValue Name="A398" Value="33.294651189245656" />
+        <RulerValue Name="A398" Value="33.8114785780584" />
         <RulerValue Name="A399" Value="33.8114785780584" />
         <RulerValue Name="A400" Value="33.8114785780584" />
         <RulerValue Name="A401" Value="33.8114785780584" />
         <RulerValue Name="A402" Value="33.8114785780584" />
-        <RulerValue Name="A403" Value="33.8114785780584" />
+        <RulerValue Name="A403" Value="33.55311137520399" />
         <RulerValue Name="A404" Value="33.8114785780584" />
         <RulerValue Name="A405" Value="33.8114785780584" />
         <RulerValue Name="A406" Value="33.8114785780584" />
-        <RulerValue Name="A407" Value="33.55311137520399" />
+        <RulerValue Name="A407" Value="33.8114785780584" />
         <RulerValue Name="A408" Value="33.8114785780584" />
         <RulerValue Name="A409" Value="33.8114785780584" />
         <RulerValue Name="A410" Value="33.8114785780584" />
@@ -2460,20 +2444,20 @@
         <RulerValue Name="A437" Value="33.8114785780584" />
         <RulerValue Name="A438" Value="33.8114785780584" />
         <RulerValue Name="A439" Value="33.8114785780584" />
-        <RulerValue Name="A440" Value="33.8114785780584" />
+        <RulerValue Name="A440" Value="60.06692293180216" />
         <RulerValue Name="A441" Value="33.8114785780584" />
         <RulerValue Name="A442" Value="33.8114785780584" />
         <RulerValue Name="A443" Value="33.8114785780584" />
-        <RulerValue Name="A444" Value="60.06692293180216" />
+        <RulerValue Name="A444" Value="33.8114785780584" />
         <RulerValue Name="A445" Value="33.8114785780584" />
         <RulerValue Name="A446" Value="33.8114785780584" />
         <RulerValue Name="A447" Value="33.8114785780584" />
         <RulerValue Name="A448" Value="33.8114785780584" />
-        <RulerValue Name="A449" Value="33.8114785780584" />
+        <RulerValue Name="A449" Value="32.77745219565432" />
         <RulerValue Name="A450" Value="33.8114785780584" />
         <RulerValue Name="A451" Value="33.8114785780584" />
         <RulerValue Name="A452" Value="33.8114785780584" />
-        <RulerValue Name="A453" Value="32.77745219565432" />
+        <RulerValue Name="A453" Value="33.8114785780584" />
         <RulerValue Name="A454" Value="33.8114785780584" />
         <RulerValue Name="A455" Value="33.8114785780584" />
         <RulerValue Name="A456" Value="33.8114785780584" />
@@ -2485,4 +2469,1553 @@
         <RulerValue Name="A462" Value="33.8114785780584" />
         <RulerValue Name="A463" Value="33.8114785780584" />
         <RulerValue Name="A464" Value="33.8114785780584" />
-        <RulerValue
+        <RulerValue Name="A465" Value="33.8114785780584" />
+        <RulerValue Name="A466" Value="33.8114785780584" />
+        <RulerValue Name="A467" Value="33.8114785780584" />
+        <RulerValue Name="A468" Value="33.8114785780584" />
+        <RulerValue Name="A469" Value="33.8114785780584" />
+        <RulerValue Name="A470" Value="33.8114785780584" />
+        <RulerValue Name="A471" Value="33.8114785780584" />
+        <RulerValue Name="A472" Value="33.8114785780584" />
+        <RulerValue Name="A473" Value="33.8114785780584" />
+        <RulerValue Name="A474" Value="33.8114785780584" />
+        <RulerValue Name="A475" Value="33.8114785780584" />
+        <RulerValue Name="A476" Value="33.8114785780584" />
+        <RulerValue Name="A477" Value="33.8114785780584" />
+        <RulerValue Name="A478" Value="33.8114785780584" />
+        <RulerValue Name="A479" Value="33.8114785780584" />
+        <RulerValue Name="A480" Value="29.666491229117455" />
+        <RulerValue Name="A481" Value="33.8114785780584" />
+        <RulerValue Name="A482" Value="33.8114785780584" />
+        <RulerValue Name="A483" Value="33.8114785780584" />
+        <RulerValue Name="A484" Value="33.8114785780584" />
+        <RulerValue Name="A485" Value="33.8114785780584" />
+        <RulerValue Name="A486" Value="33.8114785780584" />
+        <RulerValue Name="A487" Value="33.8114785780584" />
+        <RulerValue Name="A488" Value="33.8114785780584" />
+        <RulerValue Name="A489" Value="33.8114785780584" />
+        <RulerValue Name="A490" Value="33.8114785780584" />
+        <RulerValue Name="A491" Value="33.8114785780584" />
+        <RulerValue Name="A492" Value="33.8114785780584" />
+        <RulerValue Name="A493" Value="33.8114785780584" />
+        <RulerValue Name="A494" Value="33.8114785780584" />
+        <RulerValue Name="A495" Value="33.8114785780584" />
+        <RulerValue Name="A496" Value="33.8114785780584" />
+      </Measurement>
+    </Criterion>
+    <Criterion Name="C3" IsPreferenceIncreasing="1">
+      <Comment />
+      <Measurement Name="Ratings" Type="0" DecisionMaker="Default User" SubType="0">
+        <Comment />
+      <RulerValue Name="A1" Value="92.87180667538541" />
+        <RulerValue Name="A2" Value="59.26927920873792" />
+        <RulerValue Name="A3" Value="92.85542309729134" />
+        <RulerValue Name="A4" Value="59.01486525860172" />
+        <RulerValue Name="A5" Value="99.63315110794929" />
+        <RulerValue Name="A6" Value="83.63616395553305" />
+        <RulerValue Name="A7" Value="99.63315110794929" />
+        <RulerValue Name="A8" Value="99.63315110794929" />
+        <RulerValue Name="A9" Value="99.63315110794929" />
+        <RulerValue Name="A10" Value="99.63315110794929" />
+        <RulerValue Name="A11" Value="99.63315110794929" />
+        <RulerValue Name="A12" Value="99.63315110794929" />
+        <RulerValue Name="A13" Value="99.63315110794929" />
+        <RulerValue Name="A14" Value="99.63315110794929" />
+        <RulerValue Name="A15" Value="99.63315110794929" />
+        <RulerValue Name="A16" Value="99.63315110794929" />
+        <RulerValue Name="A17" Value="99.63315110794929" />
+        <RulerValue Name="A18" Value="98.15917830996057" />
+        <RulerValue Name="A19" Value="99.63315110794929" />
+        <RulerValue Name="A20" Value="99.63315110794929" />
+        <RulerValue Name="A21" Value="99.63315110794929" />
+        <RulerValue Name="A22" Value="99.63315110794929" />
+        <RulerValue Name="A23" Value="99.63315110794929" />
+        <RulerValue Name="A24" Value="99.63315110794929" />
+        <RulerValue Name="A25" Value="99.63315110794929" />
+        <RulerValue Name="A26" Value="99.63315110794929" />
+        <RulerValue Name="A27" Value="99.63315110794929" />
+        <RulerValue Name="A28" Value="99.63315110794929" />
+        <RulerValue Name="A29" Value="99.63315110794929" />
+        <RulerValue Name="A30" Value="99.63315110794929" />
+        <RulerValue Name="A31" Value="99.63315110794929" />
+        <RulerValue Name="A32" Value="99.63315110794929" />
+        <RulerValue Name="A33" Value="99.63315110794929" />
+        <RulerValue Name="A34" Value="99.63315110794929" />
+        <RulerValue Name="A35" Value="96.58184260858236" />
+        <RulerValue Name="A36" Value="99.63315110794929" />
+        <RulerValue Name="A37" Value="99.63315110794929" />
+        <RulerValue Name="A38" Value="99.63315110794929" />
+        <RulerValue Name="A39" Value="99.63315110794929" />
+        <RulerValue Name="A40" Value="99.63315110794929" />
+        <RulerValue Name="A41" Value="99.63315110794929" />
+        <RulerValue Name="A42" Value="99.63315110794929" />
+        <RulerValue Name="A43" Value="99.63315110794929" />
+        <RulerValue Name="A44" Value="99.63315110794929" />
+        <RulerValue Name="A45" Value="99.63315110794929" />
+        <RulerValue Name="A46" Value="99.63315110794929" />
+        <RulerValue Name="A47" Value="99.63315110794929" />
+        <RulerValue Name="A48" Value="99.63315110794929" />
+        <RulerValue Name="A49" Value="99.63315110794929" />
+        <RulerValue Name="A50" Value="99.63315110794929" />
+        <RulerValue Name="A51" Value="96.57153847962948" />
+        <RulerValue Name="A52" Value="99.63315110794929" />
+        <RulerValue Name="A53" Value="99.63315110794929" />
+        <RulerValue Name="A54" Value="99.63315110794929" />
+        <RulerValue Name="A55" Value="99.63315110794929" />
+        <RulerValue Name="A56" Value="96.15523881315768" />
+        <RulerValue Name="A57" Value="99.63315110794929" />
+        <RulerValue Name="A58" Value="93.01951214614529" />
+        <RulerValue Name="A59" Value="99.63315110794929" />
+        <RulerValue Name="A60" Value="99.63315110794929" />
+        <RulerValue Name="A61" Value="99.63315110794929" />
+        <RulerValue Name="A62" Value="99.63315110794929" />
+        <RulerValue Name="A63" Value="99.63315110794929" />
+        <RulerValue Name="A64" Value="99.63315110794929" />
+        <RulerValue Name="A65" Value="99.63315110794929" />
+        <RulerValue Name="A66" Value="99.63315110794929" />
+        <RulerValue Name="A67" Value="99.63315110794929" />
+        <RulerValue Name="A68" Value="99.63315110794929" />
+        <RulerValue Name="A69" Value="99.63315110794929" />
+        <RulerValue Name="A70" Value="99.63315110794929" />
+        <RulerValue Name="A71" Value="93.01951214614529" />
+        <RulerValue Name="A72" Value="99.63315110794929" />
+        <RulerValue Name="A73" Value="99.63315110794929" />
+        <RulerValue Name="A74" Value="99.63315110794929" />
+        <RulerValue Name="A75" Value="99.63315110794929" />
+        <RulerValue Name="A76" Value="99.63315110794929" />
+        <RulerValue Name="A77" Value="99.63315110794929" />
+        <RulerValue Name="A78" Value="99.63315110794929" />
+        <RulerValue Name="A79" Value="99.63315110794929" />
+        <RulerValue Name="A80" Value="99.63315110794929" />
+        <RulerValue Name="A81" Value="99.63315110794929" />
+        <RulerValue Name="A82" Value="99.63315110794929" />
+        <RulerValue Name="A83" Value="99.63315110794929" />
+        <RulerValue Name="A84" Value="99.63315110794929" />
+        <RulerValue Name="A85" Value="99.63315110794929" />
+        <RulerValue Name="A86" Value="99.63315110794929" />
+        <RulerValue Name="A87" Value="99.63315110794929" />
+        <RulerValue Name="A88" Value="99.63315110794929" />
+        <RulerValue Name="A89" Value="99.63315110794929" />
+        <RulerValue Name="A90" Value="99.63315110794929" />
+        <RulerValue Name="A91" Value="99.63315110794929" />
+        <RulerValue Name="A92" Value="99.63315110794929" />
+        <RulerValue Name="A93" Value="99.63315110794929" />
+        <RulerValue Name="A94" Value="99.63315110794929" />
+        <RulerValue Name="A95" Value="99.63315110794929" />
+        <RulerValue Name="A96" Value="99.63315110794929" />
+        <RulerValue Name="A97" Value="99.63315110794929" />
+        <RulerValue Name="A98" Value="99.63315110794929" />
+        <RulerValue Name="A99" Value="99.63315110794929" />
+        <RulerValue Name="A100" Value="93.01951214614529" />
+        <RulerValue Name="A101" Value="99.63315110794929" />
+        <RulerValue Name="A102" Value="99.63315110794929" />
+        <RulerValue Name="A103" Value="92.92243547165613" />
+        <RulerValue Name="A104" Value="99.63315110794929" />
+        <RulerValue Name="A105" Value="99.63315110794929" />
+        <RulerValue Name="A106" Value="99.63315110794929" />
+        <RulerValue Name="A107" Value="99.63315110794929" />
+        <RulerValue Name="A108" Value="99.63315110794929" />
+        <RulerValue Name="A109" Value="99.27461227317932" />
+        <RulerValue Name="A110" Value="99.63315110794929" />
+        <RulerValue Name="A111" Value="99.63315110794929" />
+        <RulerValue Name="A112" Value="99.63315110794929" />
+        <RulerValue Name="A113" Value="99.63315110794929" />
+        <RulerValue Name="A114" Value="99.63315110794929" />
+        <RulerValue Name="A115" Value="99.63315110794929" />
+        <RulerValue Name="A116" Value="99.63315110794929" />
+        <RulerValue Name="A117" Value="99.63315110794929" />
+        <RulerValue Name="A118" Value="99.63315110794929" />
+        <RulerValue Name="A119" Value="99.63315110794929" />
+        <RulerValue Name="A120" Value="99.63315110794929" />
+        <RulerValue Name="A121" Value="99.63315110794929" />
+        <RulerValue Name="A122" Value="99.63315110794929" />
+        <RulerValue Name="A123" Value="99.63315110794929" />
+        <RulerValue Name="A124" Value="99.63315110794929" />
+        <RulerValue Name="A125" Value="99.63315110794929" />
+        <RulerValue Name="A126" Value="99.63315110794929" />
+        <RulerValue Name="A127" Value="99.63315110794929" />
+        <RulerValue Name="A128" Value="99.63315110794929" />
+        <RulerValue Name="A129" Value="99.63315110794929" />
+        <RulerValue Name="A130" Value="99.63315110794929" />
+        <RulerValue Name="A131" Value="99.63315110794929" />
+        <RulerValue Name="A132" Value="99.63315110794929" />
+        <RulerValue Name="A133" Value="99.63315110794929" />
+        <RulerValue Name="A134" Value="99.63315110794929" />
+        <RulerValue Name="A135" Value="99.63315110794929" />
+        <RulerValue Name="A136" Value="98.15917830996057" />
+        <RulerValue Name="A137" Value="99.54411678098175" />
+        <RulerValue Name="A138" Value="99.63315110794929" />
+        <RulerValue Name="A139" Value="99.63315110794929" />
+        <RulerValue Name="A140" Value="99.63315110794929" />
+        <RulerValue Name="A141" Value="99.63315110794929" />
+        <RulerValue Name="A142" Value="99.63315110794929" />
+        <RulerValue Name="A143" Value="99.63315110794929" />
+        <RulerValue Name="A144" Value="99.63315110794929" />
+        <RulerValue Name="A145" Value="99.63315110794929" />
+        <RulerValue Name="A146" Value="99.63315110794929" />
+        <RulerValue Name="A147" Value="99.63315110794929" />
+        <RulerValue Name="A148" Value="99.63315110794929" />
+        <RulerValue Name="A149" Value="99.63315110794929" />
+        <RulerValue Name="A150" Value="99.63315110794929" />
+        <RulerValue Name="A151" Value="99.63315110794929" />
+        <RulerValue Name="A152" Value="99.63315110794929" />
+        <RulerValue Name="A153" Value="99.63315110794929" />
+        <RulerValue Name="A154" Value="99.63315110794929" />
+        <RulerValue Name="A155" Value="99.63315110794929" />
+        <RulerValue Name="A156" Value="99.63315110794929" />
+        <RulerValue Name="A157" Value="99.63315110794929" />
+        <RulerValue Name="A158" Value="99.63315110794929" />
+        <RulerValue Name="A159" Value="99.63315110794929" />
+        <RulerValue Name="A160" Value="99.63315110794929" />
+        <RulerValue Name="A161" Value="99.63315110794929" />
+        <RulerValue Name="A162" Value="99.63315110794929" />
+        <RulerValue Name="A163" Value="99.63315110794929" />
+        <RulerValue Name="A164" Value="99.63315110794929" />
+        <RulerValue Name="A165" Value="99.63315110794929" />
+        <RulerValue Name="A166" Value="99.63315110794929" />
+        <RulerValue Name="A167" Value="99.63315110794929" />
+        <RulerValue Name="A168" Value="99.63315110794929" />
+        <RulerValue Name="A169" Value="99.63315110794929" />
+        <RulerValue Name="A170" Value="99.63315110794929" />
+        <RulerValue Name="A171" Value="99.63315110794929" />
+        <RulerValue Name="A172" Value="99.63315110794929" />
+        <RulerValue Name="A173" Value="99.63315110794929" />
+        <RulerValue Name="A174" Value="99.63315110794929" />
+        <RulerValue Name="A175" Value="99.63315110794929" />
+        <RulerValue Name="A176" Value="99.63315110794929" />
+        <RulerValue Name="A177" Value="99.63315110794929" />
+        <RulerValue Name="A178" Value="99.63315110794929" />
+        <RulerValue Name="A179" Value="99.63315110794929" />
+        <RulerValue Name="A180" Value="99.63315110794929" />
+        <RulerValue Name="A181" Value="99.63315110794929" />
+        <RulerValue Name="A182" Value="99.63315110794929" />
+        <RulerValue Name="A183" Value="99.63315110794929" />
+        <RulerValue Name="A184" Value="99.63315110794929" />
+        <RulerValue Name="A185" Value="99.63315110794929" />
+        <RulerValue Name="A186" Value="99.63315110794929" />
+        <RulerValue Name="A187" Value="99.63315110794929" />
+        <RulerValue Name="A188" Value="99.63315110794929" />
+        <RulerValue Name="A189" Value="99.63315110794929" />
+        <RulerValue Name="A190" Value="99.63315110794929" />
+        <RulerValue Name="A191" Value="99.63315110794929" />
+        <RulerValue Name="A192" Value="99.63315110794929" />
+        <RulerValue Name="A193" Value="99.63315110794929" />
+        <RulerValue Name="A194" Value="99.63315110794929" />
+        <RulerValue Name="A195" Value="99.63315110794929" />
+        <RulerValue Name="A196" Value="99.63315110794929" />
+        <RulerValue Name="A197" Value="99.63315110794929" />
+        <RulerValue Name="A198" Value="99.63315110794929" />
+        <RulerValue Name="A199" Value="99.63315110794929" />
+        <RulerValue Name="A200" Value="99.63315110794929" />
+        <RulerValue Name="A201" Value="99.63315110794929" />
+        <RulerValue Name="A202" Value="99.63315110794929" />
+        <RulerValue Name="A203" Value="99.63315110794929" />
+        <RulerValue Name="A204" Value="99.63315110794929" />
+        <RulerValue Name="A205" Value="99.63315110794929" />
+        <RulerValue Name="A206" Value="99.63315110794929" />
+        <RulerValue Name="A207" Value="99.63315110794929" />
+        <RulerValue Name="A208" Value="99.63315110794929" />
+        <RulerValue Name="A209" Value="99.63315110794929" />
+        <RulerValue Name="A210" Value="99.63315110794929" />
+        <RulerValue Name="A211" Value="99.45468406962314" />
+        <RulerValue Name="A212" Value="99.63315110794929" />
+        <RulerValue Name="A213" Value="99.63315110794929" />
+        <RulerValue Name="A214" Value="99.63315110794929" />
+        <RulerValue Name="A215" Value="99.63315110794929" />
+        <RulerValue Name="A216" Value="99.63315110794929" />
+        <RulerValue Name="A217" Value="99.63315110794929" />
+        <RulerValue Name="A218" Value="99.63315110794929" />
+        <RulerValue Name="A219" Value="99.63315110794929" />
+        <RulerValue Name="A220" Value="99.63315110794929" />
+        <RulerValue Name="A221" Value="99.63315110794929" />
+        <RulerValue Name="A222" Value="99.63315110794929" />
+        <RulerValue Name="A223" Value="99.63315110794929" />
+        <RulerValue Name="A224" Value="99.63315110794929" />
+        <RulerValue Name="A225" Value="99.63315110794929" />
+        <RulerValue Name="A226" Value="99.63315110794929" />
+        <RulerValue Name="A227" Value="99.63315110794929" />
+        <RulerValue Name="A228" Value="99.63315110794929" />
+        <RulerValue Name="A229" Value="99.63315110794929" />
+        <RulerValue Name="A230" Value="99.63315110794929" />
+        <RulerValue Name="A231" Value="99.63315110794929" />
+        <RulerValue Name="A232" Value="99.63315110794929" />
+        <RulerValue Name="A233" Value="99.63315110794929" />
+        <RulerValue Name="A234" Value="99.63315110794929" />
+        <RulerValue Name="A235" Value="99.63315110794929" />
+        <RulerValue Name="A236" Value="99.63315110794929" />
+        <RulerValue Name="A237" Value="99.63315110794929" />
+        <RulerValue Name="A238" Value="99.63315110794929" />
+        <RulerValue Name="A239" Value="99.63315110794929" />
+        <RulerValue Name="A240" Value="99.63315110794929" />
+        <RulerValue Name="A241" Value="98.15917830996057" />
+        <RulerValue Name="A242" Value="99.63315110794929" />
+        <RulerValue Name="A243" Value="99.63315110794929" />
+        <RulerValue Name="A244" Value="99.63315110794929" />
+        <RulerValue Name="A245" Value="99.63315110794929" />
+        <RulerValue Name="A246" Value="99.63315110794929" />
+        <RulerValue Name="A247" Value="99.63315110794929" />
+        <RulerValue Name="A248" Value="99.63315110794929" />
+        <RulerValue Name="A249" Value="99.63315110794929" />
+        <RulerValue Name="A250" Value="99.63315110794929" />
+        <RulerValue Name="A251" Value="99.63315110794929" />
+        <RulerValue Name="A252" Value="99.63315110794929" />
+        <RulerValue Name="A253" Value="99.63315110794929" />
+        <RulerValue Name="A254" Value="99.63315110794929" />
+        <RulerValue Name="A255" Value="99.63315110794929" />
+        <RulerValue Name="A256" Value="99.63315110794929" />
+        <RulerValue Name="A257" Value="99.63315110794929" />
+        <RulerValue Name="A258" Value="98.66304725170308" />
+        <RulerValue Name="A259" Value="99.63315110794929" />
+        <RulerValue Name="A260" Value="99.63315110794929" />
+        <RulerValue Name="A261" Value="98.90956311964084" />
+        <RulerValue Name="A262" Value="98.15917830996057" />
+        <RulerValue Name="A263" Value="99.63315110794929" />
+        <RulerValue Name="A264" Value="99.63315110794929" />
+        <RulerValue Name="A265" Value="99.63315110794929" />
+        <RulerValue Name="A266" Value="99.63315110794929" />
+        <RulerValue Name="A267" Value="99.63315110794929" />
+        <RulerValue Name="A268" Value="99.63315110794929" />
+        <RulerValue Name="A269" Value="99.63315110794929" />
+        <RulerValue Name="A270" Value="99.63315110794929" />
+        <RulerValue Name="A271" Value="98.90956311964084" />
+        <RulerValue Name="A272" Value="99.63315110794929" />
+        <RulerValue Name="A273" Value="99.63315110794929" />
+        <RulerValue Name="A274" Value="99.54411678098175" />
+        <RulerValue Name="A275" Value="99.63315110794929" />
+        <RulerValue Name="A276" Value="99.63315110794929" />
+        <RulerValue Name="A277" Value="99.63315110794929" />
+        <RulerValue Name="A278" Value="99.63315110794929" />
+        <RulerValue Name="A279" Value="99.63315110794929" />
+        <RulerValue Name="A280" Value="99.63315110794929" />
+        <RulerValue Name="A281" Value="99.63315110794929" />
+        <RulerValue Name="A282" Value="99.63315110794929" />
+        <RulerValue Name="A283" Value="99.63315110794929" />
+        <RulerValue Name="A284" Value="99.63315110794929" />
+        <RulerValue Name="A285" Value="99.63315110794929" />
+        <RulerValue Name="A286" Value="99.63315110794929" />
+        <RulerValue Name="A287" Value="99.63315110794929" />
+        <RulerValue Name="A288" Value="99.63315110794929" />
+        <RulerValue Name="A289" Value="99.63315110794929" />
+        <RulerValue Name="A290" Value="99.63315110794929" />
+        <RulerValue Name="A291" Value="99.63315110794929" />
+        <RulerValue Name="A292" Value="99.63315110794929" />
+        <RulerValue Name="A293" Value="99.63315110794929" />
+        <RulerValue Name="A294" Value="99.63315110794929" />
+        <RulerValue Name="A295" Value="92.9952816253433" />
+        <RulerValue Name="A296" Value="99.63315110794929" />
+        <RulerValue Name="A297" Value="99.63315110794929" />
+        <RulerValue Name="A298" Value="99.63315110794929" />
+        <RulerValue Name="A299" Value="99.63315110794929" />
+        <RulerValue Name="A300" Value="99.63315110794929" />
+        <RulerValue Name="A301" Value="99.63315110794929" />
+        <RulerValue Name="A302" Value="99.63315110794929" />
+        <RulerValue Name="A303" Value="99.63315110794929" />
+        <RulerValue Name="A304" Value="83.63616395553305" />
+        <RulerValue Name="A305" Value="99.63315110794929" />
+        <RulerValue Name="A306" Value="99.63315110794929" />
+        <RulerValue Name="A307" Value="99.63315110794929" />
+        <RulerValue Name="A308" Value="99.63315110794929" />
+        <RulerValue Name="A309" Value="99.63315110794929" />
+        <RulerValue Name="A310" Value="99.63315110794929" />
+        <RulerValue Name="A311" Value="99.63315110794929" />
+        <RulerValue Name="A312" Value="99.63315110794929" />
+        <RulerValue Name="A313" Value="99.63315110794929" />
+        <RulerValue Name="A314" Value="99.63315110794929" />
+        <RulerValue Name="A315" Value="99.63315110794929" />
+        <RulerValue Name="A316" Value="99.63315110794929" />
+        <RulerValue Name="A317" Value="99.63315110794929" />
+        <RulerValue Name="A318" Value="99.63315110794929" />
+        <RulerValue Name="A319" Value="99.63315110794929" />
+        <RulerValue Name="A320" Value="99.63315110794929" />
+        <RulerValue Name="A321" Value="99.63315110794929" />
+        <RulerValue Name="A322" Value="99.63315110794929" />
+        <RulerValue Name="A323" Value="99.63315110794929" />
+        <RulerValue Name="A324" Value="99.63315110794929" />
+        <RulerValue Name="A325" Value="99.63315110794929" />
+        <RulerValue Name="A326" Value="99.63315110794929" />
+        <RulerValue Name="A327" Value="99.63315110794929" />
+        <RulerValue Name="A328" Value="99.63315110794929" />
+        <RulerValue Name="A329" Value="99.63315110794929" />
+        <RulerValue Name="A330" Value="99.63315110794929" />
+        <RulerValue Name="A331" Value="99.63315110794929" />
+        <RulerValue Name="A332" Value="99.63315110794929" />
+        <RulerValue Name="A333" Value="99.63315110794929" />
+        <RulerValue Name="A334" Value="99.63315110794929" />
+        <RulerValue Name="A335" Value="99.63315110794929" />
+        <RulerValue Name="A336" Value="99.63315110794929" />
+        <RulerValue Name="A337" Value="99.63315110794929" />
+        <RulerValue Name="A338" Value="99.63315110794929" />
+        <RulerValue Name="A339" Value="99.63315110794929" />
+        <RulerValue Name="A340" Value="99.63315110794929" />
+        <RulerValue Name="A341" Value="99.63315110794929" />
+        <RulerValue Name="A342" Value="99.63315110794929" />
+        <RulerValue Name="A343" Value="99.63315110794929" />
+        <RulerValue Name="A344" Value="99.63315110794929" />
+        <RulerValue Name="A345" Value="99.63315110794929" />
+        <RulerValue Name="A346" Value="99.63315110794929" />
+        <RulerValue Name="A347" Value="99.63315110794929" />
+        <RulerValue Name="A348" Value="99.63315110794929" />
+        <RulerValue Name="A349" Value="99.63315110794929" />
+        <RulerValue Name="A350" Value="99.63315110794929" />
+        <RulerValue Name="A351" Value="99.63315110794929" />
+        <RulerValue Name="A352" Value="99.63315110794929" />
+        <RulerValue Name="A353" Value="99.63315110794929" />
+        <RulerValue Name="A354" Value="99.63315110794929" />
+        <RulerValue Name="A355" Value="99.09291300706431" />
+        <RulerValue Name="A356" Value="99.63315110794929" />
+        <RulerValue Name="A357" Value="99.63315110794929" />
+        <RulerValue Name="A358" Value="99.63315110794929" />
+        <RulerValue Name="A359" Value="98.36839039715096" />
+        <RulerValue Name="A360" Value="99.63315110794929" />
+        <RulerValue Name="A361" Value="99.63315110794929" />
+        <RulerValue Name="A362" Value="99.63315110794929" />
+        <RulerValue Name="A363" Value="99.63315110794929" />
+        <RulerValue Name="A364" Value="99.63315110794929" />
+        <RulerValue Name="A365" Value="99.63315110794929" />
+        <RulerValue Name="A366" Value="99.63315110794929" />
+        <RulerValue Name="A367" Value="99.63315110794929" />
+        <RulerValue Name="A368" Value="99.63315110794929" />
+        <RulerValue Name="A369" Value="99.63315110794929" />
+        <RulerValue Name="A370" Value="99.63315110794929" />
+        <RulerValue Name="A371" Value="99.63315110794929" />
+        <RulerValue Name="A372" Value="99.63315110794929" />
+        <RulerValue Name="A373" Value="99.63315110794929" />
+        <RulerValue Name="A374" Value="99.63315110794929" />
+        <RulerValue Name="A375" Value="99.63315110794929" />
+        <RulerValue Name="A376" Value="99.54411678098175" />
+        <RulerValue Name="A377" Value="99.63315110794929" />
+        <RulerValue Name="A378" Value="88.79835176986388" />
+        <RulerValue Name="A379" Value="99.63315110794929" />
+        <RulerValue Name="A380" Value="98.90956311964084" />
+        <RulerValue Name="A381" Value="99.63315110794929" />
+        <RulerValue Name="A382" Value="99.63315110794929" />
+        <RulerValue Name="A383" Value="99.63315110794929" />
+        <RulerValue Name="A384" Value="99.63315110794929" />
+        <RulerValue Name="A385" Value="99.63315110794929" />
+        <RulerValue Name="A386" Value="99.63315110794929" />
+        <RulerValue Name="A387" Value="99.63315110794929" />
+        <RulerValue Name="A388" Value="99.63315110794929" />
+        <RulerValue Name="A389" Value="99.63315110794929" />
+        <RulerValue Name="A390" Value="99.63315110794929" />
+        <RulerValue Name="A391" Value="99.63315110794929" />
+        <RulerValue Name="A392" Value="99.63315110794929" />
+        <RulerValue Name="A393" Value="99.63315110794929" />
+        <RulerValue Name="A394" Value="99.63315110794929" />
+        <RulerValue Name="A395" Value="98.90956311964084" />
+        <RulerValue Name="A396" Value="99.63315110794929" />
+        <RulerValue Name="A397" Value="99.63315110794929" />
+        <RulerValue Name="A398" Value="83.63616395553305" />
+        <RulerValue Name="A399" Value="99.63315110794929" />
+        <RulerValue Name="A400" Value="99.63315110794929" />
+        <RulerValue Name="A401" Value="99.63315110794929" />
+        <RulerValue Name="A402" Value="99.63315110794929" />
+        <RulerValue Name="A403" Value="99.63315110794929" />
+        <RulerValue Name="A404" Value="83.63616395553305" />
+        <RulerValue Name="A405" Value="99.63315110794929" />
+        <RulerValue Name="A406" Value="99.63315110794929" />
+        <RulerValue Name="A407" Value="99.63315110794929" />
+        <RulerValue Name="A408" Value="99.63315110794929" />
+        <RulerValue Name="A409" Value="96.57153847962948" />
+        <RulerValue Name="A410" Value="99.63315110794929" />
+        <RulerValue Name="A411" Value="99.63315110794929" />
+        <RulerValue Name="A412" Value="99.63315110794929" />
+        <RulerValue Name="A413" Value="99.63315110794929" />
+        <RulerValue Name="A414" Value="99.63315110794929" />
+        <RulerValue Name="A415" Value="99.63315110794929" />
+        <RulerValue Name="A416" Value="99.63315110794929" />
+        <RulerValue Name="A417" Value="99.63315110794929" />
+        <RulerValue Name="A418" Value="99.63315110794929" />
+        <RulerValue Name="A419" Value="99.63315110794929" />
+        <RulerValue Name="A420" Value="99.63315110794929" />
+        <RulerValue Name="A421" Value="99.63315110794929" />
+        <RulerValue Name="A422" Value="99.63315110794929" />
+        <RulerValue Name="A423" Value="99.63315110794929" />
+        <RulerValue Name="A424" Value="99.63315110794929" />
+        <RulerValue Name="A425" Value="99.63315110794929" />
+        <RulerValue Name="A426" Value="99.63315110794929" />
+        <RulerValue Name="A427" Value="99.63315110794929" />
+        <RulerValue Name="A428" Value="99.63315110794929" />
+        <RulerValue Name="A429" Value="69.2844382182125" />
+        <RulerValue Name="A430" Value="99.63315110794929" />
+        <RulerValue Name="A431" Value="99.63315110794929" />
+        <RulerValue Name="A432" Value="99.63315110794929" />
+        <RulerValue Name="A433" Value="99.63315110794929" />
+        <RulerValue Name="A434" Value="99.63315110794929" />
+        <RulerValue Name="A435" Value="99.63315110794929" />
+        <RulerValue Name="A436" Value="99.63315110794929" />
+        <RulerValue Name="A437" Value="83.63616395553305" />
+        <RulerValue Name="A438" Value="99.63315110794929" />
+        <RulerValue Name="A439" Value="99.63315110794929" />
+        <RulerValue Name="A440" Value="99.63315110794929" />
+        <RulerValue Name="A441" Value="98.90956311964084" />
+        <RulerValue Name="A442" Value="99.63315110794929" />
+        <RulerValue Name="A443" Value="99.63315110794929" />
+        <RulerValue Name="A444" Value="99.63315110794929" />
+        <RulerValue Name="A445" Value="99.63315110794929" />
+        <RulerValue Name="A446" Value="99.63315110794929" />
+        <RulerValue Name="A447" Value="99.63315110794929" />
+        <RulerValue Name="A448" Value="99.63315110794929" />
+        <RulerValue Name="A449" Value="99.63315110794929" />
+        <RulerValue Name="A450" Value="99.63315110794929" />
+        <RulerValue Name="A451" Value="83.63616395553305" />
+        <RulerValue Name="A452" Value="99.63315110794929" />
+        <RulerValue Name="A453" Value="99.63315110794929" />
+        <RulerValue Name="A454" Value="99.63315110794929" />
+        <RulerValue Name="A455" Value="99.63315110794929" />
+        <RulerValue Name="A456" Value="99.63315110794929" />
+        <RulerValue Name="A457" Value="99.63315110794929" />
+        <RulerValue Name="A458" Value="99.63315110794929" />
+        <RulerValue Name="A459" Value="99.63315110794929" />
+        <RulerValue Name="A460" Value="99.63315110794929" />
+        <RulerValue Name="A461" Value="99.63315110794929" />
+        <RulerValue Name="A462" Value="99.63315110794929" />
+        <RulerValue Name="A463" Value="99.63315110794929" />
+        <RulerValue Name="A464" Value="99.63315110794929" />
+        <RulerValue Name="A465" Value="99.63315110794929" />
+        <RulerValue Name="A466" Value="99.63315110794929" />
+        <RulerValue Name="A467" Value="99.54411678098175" />
+        <RulerValue Name="A468" Value="93.01951214614529" />
+        <RulerValue Name="A469" Value="99.63315110794929" />
+        <RulerValue Name="A470" Value="99.63315110794929" />
+        <RulerValue Name="A471" Value="99.63315110794929" />
+        <RulerValue Name="A472" Value="99.63315110794929" />
+        <RulerValue Name="A473" Value="99.63315110794929" />
+        <RulerValue Name="A474" Value="99.63315110794929" />
+        <RulerValue Name="A475" Value="99.63315110794929" />
+        <RulerValue Name="A476" Value="99.63315110794929" />
+        <RulerValue Name="A477" Value="99.63315110794929" />
+        <RulerValue Name="A478" Value="99.63315110794929" />
+        <RulerValue Name="A479" Value="99.63315110794929" />
+        <RulerValue Name="A480" Value="99.63315110794929" />
+        <RulerValue Name="A481" Value="99.63315110794929" />
+        <RulerValue Name="A482" Value="99.63315110794929" />
+        <RulerValue Name="A483" Value="99.63315110794929" />
+        <RulerValue Name="A484" Value="99.63315110794929" />
+        <RulerValue Name="A485" Value="99.63315110794929" />
+        <RulerValue Name="A486" Value="99.63315110794929" />
+        <RulerValue Name="A487" Value="99.63315110794929" />
+        <RulerValue Name="A488" Value="99.63315110794929" />
+        <RulerValue Name="A489" Value="99.63315110794929" />
+        <RulerValue Name="A490" Value="99.63315110794929" />
+        <RulerValue Name="A491" Value="98.60766336052481" />
+        <RulerValue Name="A492" Value="99.63315110794929" />
+        <RulerValue Name="A493" Value="99.63315110794929" />
+        <RulerValue Name="A494" Value="99.63315110794929" />
+        <RulerValue Name="A495" Value="99.63315110794929" />
+        <RulerValue Name="A496" Value="99.63315110794929" />
+      </Measurement>
+    </Criterion>
+    <Criterion Name="C4" IsPreferenceIncreasing="1">
+      <Comment />
+      <Measurement Name="Ratings" Type="0" DecisionMaker="Default User" SubType="0">
+        <Comment />
+      <RulerValue Name="A1" Value="76.06814203567525" />
+        <RulerValue Name="A2" Value="98.94366198455018" />
+        <RulerValue Name="A3" Value="76.00990203353474" />
+        <RulerValue Name="A4" Value="95.53338702106795" />
+        <RulerValue Name="A5" Value="99.74269342751641" />
+        <RulerValue Name="A6" Value="99.74269342751641" />
+        <RulerValue Name="A7" Value="99.74269342751641" />
+        <RulerValue Name="A8" Value="99.74269342751641" />
+        <RulerValue Name="A9" Value="99.74269342751641" />
+        <RulerValue Name="A10" Value="99.74269342751641" />
+        <RulerValue Name="A11" Value="99.74269342751641" />
+        <RulerValue Name="A12" Value="99.74269342751641" />
+        <RulerValue Name="A13" Value="99.74269342751641" />
+        <RulerValue Name="A14" Value="99.74269342751641" />
+        <RulerValue Name="A15" Value="99.74269342751641" />
+        <RulerValue Name="A16" Value="99.74269342751641" />
+        <RulerValue Name="A17" Value="93.37649934276124" />
+        <RulerValue Name="A18" Value="99.63321156183262" />
+        <RulerValue Name="A19" Value="99.74269342751641" />
+        <RulerValue Name="A20" Value="99.71531960141367" />
+        <RulerValue Name="A21" Value="99.74269342751641" />
+        <RulerValue Name="A22" Value="99.74269342751641" />
+        <RulerValue Name="A23" Value="99.74269342751641" />
+        <RulerValue Name="A24" Value="99.74269342751641" />
+        <RulerValue Name="A25" Value="99.74269342751641" />
+        <RulerValue Name="A26" Value="99.74269342751641" />
+        <RulerValue Name="A27" Value="99.74269342751641" />
+        <RulerValue Name="A28" Value="99.6879480141969" />
+        <RulerValue Name="A29" Value="99.74269342751641" />
+        <RulerValue Name="A30" Value="99.74269342751641" />
+        <RulerValue Name="A31" Value="99.74269342751641" />
+        <RulerValue Name="A32" Value="99.74269342751641" />
+        <RulerValue Name="A33" Value="99.74269342751641" />
+        <RulerValue Name="A34" Value="99.74269342751641" />
+        <RulerValue Name="A35" Value="99.74269342751641" />
+        <RulerValue Name="A36" Value="99.74269342751641" />
+        <RulerValue Name="A37" Value="99.74269342751641" />
+        <RulerValue Name="A38" Value="99.74269342751641" />
+        <RulerValue Name="A39" Value="99.74269342751641" />
+        <RulerValue Name="A40" Value="99.74269342751641" />
+        <RulerValue Name="A41" Value="99.74269342751641" />
+        <RulerValue Name="A42" Value="99.74269342751641" />
+        <RulerValue Name="A43" Value="99.74269342751641" />
+        <RulerValue Name="A44" Value="99.74269342751641" />
+        <RulerValue Name="A45" Value="99.74269342751641" />
+        <RulerValue Name="A46" Value="99.74269342751641" />
+        <RulerValue Name="A47" Value="99.74269342751641" />
+        <RulerValue Name="A48" Value="99.74269342751641" />
+        <RulerValue Name="A49" Value="99.74269342751641" />
+        <RulerValue Name="A50" Value="99.74269342751641" />
+        <RulerValue Name="A51" Value="99.74269342751641" />
+        <RulerValue Name="A52" Value="99.74269342751641" />
+        <RulerValue Name="A53" Value="99.74269342751641" />
+        <RulerValue Name="A54" Value="99.74269342751641" />
+        <RulerValue Name="A55" Value="99.64365255228462" />
+        <RulerValue Name="A56" Value="99.74269342751641" />
+        <RulerValue Name="A57" Value="99.74269342751641" />
+        <RulerValue Name="A58" Value="80.51038019185145" />
+        <RulerValue Name="A59" Value="99.74269342751641" />
+        <RulerValue Name="A60" Value="87.21045511691078" />
+        <RulerValue Name="A61" Value="99.74269342751641" />
+        <RulerValue Name="A62" Value="99.74269342751641" />
+        <RulerValue Name="A63" Value="99.74269342751641" />
+        <RulerValue Name="A64" Value="99.74269342751641" />
+        <RulerValue Name="A65" Value="99.74269342751641" />
+        <RulerValue Name="A66" Value="99.74269342751641" />
+        <RulerValue Name="A67" Value="99.74269342751641" />
+        <RulerValue Name="A68" Value="99.64270930316455" />
+        <RulerValue Name="A69" Value="99.74269342751641" />
+        <RulerValue Name="A70" Value="99.74269342751641" />
+        <RulerValue Name="A71" Value="99.74269342751641" />
+        <RulerValue Name="A72" Value="99.74269342751641" />
+        <RulerValue Name="A73" Value="99.74269342751641" />
+        <RulerValue Name="A74" Value="99.74269342751641" />
+        <RulerValue Name="A75" Value="99.74269342751641" />
+        <RulerValue Name="A76" Value="99.74269342751641" />
+        <RulerValue Name="A77" Value="99.74269342751641" />
+        <RulerValue Name="A78" Value="99.74269342751641" />
+        <RulerValue Name="A79" Value="99.74269342751641" />
+        <RulerValue Name="A80" Value="99.74269342751641" />
+        <RulerValue Name="A81" Value="99.74269342751641" />
+        <RulerValue Name="A82" Value="98.15619010758597" />
+        <RulerValue Name="A83" Value="99.74269342751641" />
+        <RulerValue Name="A84" Value="99.74269342751641" />
+        <RulerValue Name="A85" Value="99.74269342751641" />
+        <RulerValue Name="A86" Value="99.74269342751641" />
+        <RulerValue Name="A87" Value="99.74269342751641" />
+        <RulerValue Name="A88" Value="99.74269342751641" />
+        <RulerValue Name="A89" Value="99.74269342751641" />
+        <RulerValue Name="A90" Value="99.74269342751641" />
+        <RulerValue Name="A91" Value="99.74269342751641" />
+        <RulerValue Name="A92" Value="99.74269342751641" />
+        <RulerValue Name="A93" Value="99.74269342751641" />
+        <RulerValue Name="A94" Value="99.74269342751641" />
+        <RulerValue Name="A95" Value="99.74269342751641" />
+        <RulerValue Name="A96" Value="99.34293673511036" />
+        <RulerValue Name="A97" Value="99.74269342751641" />
+        <RulerValue Name="A98" Value="99.74269342751641" />
+        <RulerValue Name="A99" Value="99.74269342751641" />
+        <RulerValue Name="A100" Value="80.51038019185145" />
+        <RulerValue Name="A101" Value="99.74269342751641" />
+        <RulerValue Name="A102" Value="99.74269342751641" />
+        <RulerValue Name="A103" Value="80.51038019185145" />
+        <RulerValue Name="A104" Value="99.74269342751641" />
+        <RulerValue Name="A105" Value="99.74269342751641" />
+        <RulerValue Name="A106" Value="99.74269342751641" />
+        <RulerValue Name="A107" Value="99.74269342751641" />
+        <RulerValue Name="A108" Value="99.74269342751641" />
+        <RulerValue Name="A109" Value="99.74269342751641" />
+        <RulerValue Name="A110" Value="99.74269342751641" />
+        <RulerValue Name="A111" Value="99.74269342751641" />
+        <RulerValue Name="A112" Value="99.74269342751641" />
+        <RulerValue Name="A113" Value="99.74269342751641" />
+        <RulerValue Name="A114" Value="99.74269342751641" />
+        <RulerValue Name="A115" Value="99.74269342751641" />
+        <RulerValue Name="A116" Value="99.74269342751641" />
+        <RulerValue Name="A117" Value="93.40678273884541" />
+        <RulerValue Name="A118" Value="99.63321156183262" />
+        <RulerValue Name="A119" Value="99.74269342751641" />
+        <RulerValue Name="A120" Value="99.74269342751641" />
+        <RulerValue Name="A121" Value="98.15619010758597" />
+        <RulerValue Name="A122" Value="99.74269342751641" />
+        <RulerValue Name="A123" Value="99.54275510235145" />
+        <RulerValue Name="A124" Value="99.74269342751641" />
+        <RulerValue Name="A125" Value="99.74269342751641" />
+        <RulerValue Name="A126" Value="99.74269342751641" />
+        <RulerValue Name="A127" Value="99.74269342751641" />
+        <RulerValue Name="A128" Value="99.74269342751641" />
+        <RulerValue Name="A129" Value="99.74269342751641" />
+        <RulerValue Name="A130" Value="99.74269342751641" />
+        <RulerValue Name="A131" Value="99.74269342751641" />
+        <RulerValue Name="A132" Value="87.21045511691078" />
+        <RulerValue Name="A133" Value="99.74269342751641" />
+        <RulerValue Name="A134" Value="99.74269342751641" />
+        <RulerValue Name="A135" Value="99.74269342751641" />
+        <RulerValue Name="A136" Value="98.14657519016978" />
+        <RulerValue Name="A137" Value="99.74269342751641" />
+        <RulerValue Name="A138" Value="99.74269342751641" />
+        <RulerValue Name="A139" Value="98.15619010758597" />
+        <RulerValue Name="A140" Value="99.74269342751641" />
+        <RulerValue Name="A141" Value="99.74269342751641" />
+        <RulerValue Name="A142" Value="99.54275510235145" />
+        <RulerValue Name="A143" Value="99.74269342751641" />
+        <RulerValue Name="A144" Value="99.74269342751641" />
+        <RulerValue Name="A145" Value="96.25750316716807" />
+        <RulerValue Name="A146" Value="97.99533851441889" />
+        <RulerValue Name="A147" Value="99.74269342751641" />
+        <RulerValue Name="A148" Value="99.74269342751641" />
+        <RulerValue Name="A149" Value="99.74269342751641" />
+        <RulerValue Name="A150" Value="99.64270930316455" />
+        <RulerValue Name="A151" Value="99.74269342751641" />
+        <RulerValue Name="A152" Value="99.74269342751641" />
+        <RulerValue Name="A153" Value="99.63321156183262" />
+        <RulerValue Name="A154" Value="99.74269342751641" />
+        <RulerValue Name="A155" Value="99.74269342751641" />
+        <RulerValue Name="A156" Value="99.74269342751641" />
+        <RulerValue Name="A157" Value="99.74269342751641" />
+        <RulerValue Name="A158" Value="99.74269342751641" />
+        <RulerValue Name="A159" Value="99.74269342751641" />
+        <RulerValue Name="A160" Value="99.34643493484108" />
+        <RulerValue Name="A161" Value="99.74269342751641" />
+        <RulerValue Name="A162" Value="99.74269342751641" />
+        <RulerValue Name="A163" Value="99.74269342751641" />
+        <RulerValue Name="A164" Value="99.74269342751641" />
+        <RulerValue Name="A165" Value="99.74269342751641" />
+        <RulerValue Name="A166" Value="99.74269342751641" />
+        <RulerValue Name="A167" Value="99.69317498413366" />
+        <RulerValue Name="A168" Value="99.74269342751641" />
+        <RulerValue Name="A169" Value="99.74269342751641" />
+        <RulerValue Name="A170" Value="99.74269342751641" />
+        <RulerValue Name="A171" Value="98.74495920239804" />
+        <RulerValue Name="A172" Value="99.74269342751641" />
+        <RulerValue Name="A173" Value="99.74269342751641" />
+        <RulerValue Name="A174" Value="99.74269342751641" />
+        <RulerValue Name="A175" Value="99.74269342751641" />
+        <RulerValue Name="A176" Value="96.56602362820878" />
+        <RulerValue Name="A177" Value="99.74269342751641" />
+        <RulerValue Name="A178" Value="99.74269342751641" />
+        <RulerValue Name="A179" Value="99.74269342751641" />
+        <RulerValue Name="A180" Value="99.74269342751641" />
+        <RulerValue Name="A181" Value="99.74269342751641" />
+        <RulerValue Name="A182" Value="99.74269342751641" />
+        <RulerValue Name="A183" Value="96.56602362820878" />
+        <RulerValue Name="A184" Value="99.74269342751641" />
+        <RulerValue Name="A185" Value="99.74269342751641" />
+        <RulerValue Name="A186" Value="99.74269342751641" />
+        <RulerValue Name="A187" Value="99.54275510235145" />
+        <RulerValue Name="A188" Value="99.64270930316455" />
+        <RulerValue Name="A189" Value="99.74269342751641" />
+        <RulerValue Name="A190" Value="99.74269342751641" />
+        <RulerValue Name="A191" Value="99.74269342751641" />
+        <RulerValue Name="A192" Value="99.74269342751641" />
+        <RulerValue Name="A193" Value="99.74269342751641" />
+        <RulerValue Name="A194" Value="99.74269342751641" />
+        <RulerValue Name="A195" Value="99.74269342751641" />
+        <RulerValue Name="A196" Value="99.74269342751641" />
+        <RulerValue Name="A197" Value="99.74269342751641" />
+        <RulerValue Name="A198" Value="99.74269342751641" />
+        <RulerValue Name="A199" Value="99.74269342751641" />
+        <RulerValue Name="A200" Value="99.74269342751641" />
+        <RulerValue Name="A201" Value="99.74269342751641" />
+        <RulerValue Name="A202" Value="99.74269342751641" />
+        <RulerValue Name="A203" Value="99.74269342751641" />
+        <RulerValue Name="A204" Value="99.74269342751641" />
+        <RulerValue Name="A205" Value="99.64270930316455" />
+        <RulerValue Name="A206" Value="99.74269342751641" />
+        <RulerValue Name="A207" Value="99.74269342751641" />
+        <RulerValue Name="A208" Value="99.74269342751641" />
+        <RulerValue Name="A209" Value="99.74269342751641" />
+        <RulerValue Name="A210" Value="99.74269342751641" />
+        <RulerValue Name="A211" Value="99.74269342751641" />
+        <RulerValue Name="A212" Value="99.74269342751641" />
+        <RulerValue Name="A213" Value="99.74269342751641" />
+        <RulerValue Name="A214" Value="99.74269342751641" />
+        <RulerValue Name="A215" Value="99.74269342751641" />
+        <RulerValue Name="A216" Value="99.74269342751641" />
+        <RulerValue Name="A217" Value="99.74269342751641" />
+        <RulerValue Name="A218" Value="99.74269342751641" />
+        <RulerValue Name="A219" Value="99.54275510235145" />
+        <RulerValue Name="A220" Value="99.74269342751641" />
+        <RulerValue Name="A221" Value="99.74269342751641" />
+        <RulerValue Name="A222" Value="99.74269342751641" />
+        <RulerValue Name="A223" Value="99.74269342751641" />
+        <RulerValue Name="A224" Value="99.74269342751641" />
+        <RulerValue Name="A225" Value="99.74269342751641" />
+        <RulerValue Name="A226" Value="99.74269342751641" />
+        <RulerValue Name="A227" Value="99.74269342751641" />
+        <RulerValue Name="A228" Value="99.74269342751641" />
+        <RulerValue Name="A229" Value="99.74269342751641" />
+        <RulerValue Name="A230" Value="99.74269342751641" />
+        <RulerValue Name="A231" Value="99.74269342751641" />
+        <RulerValue Name="A232" Value="99.74269342751641" />
+        <RulerValue Name="A233" Value="99.74269342751641" />
+        <RulerValue Name="A234" Value="99.74269342751641" />
+        <RulerValue Name="A235" Value="99.74269342751641" />
+        <RulerValue Name="A236" Value="99.74269342751641" />
+        <RulerValue Name="A237" Value="99.74269342751641" />
+        <RulerValue Name="A238" Value="99.74269342751641" />
+        <RulerValue Name="A239" Value="99.74269342751641" />
+        <RulerValue Name="A240" Value="99.74269342751641" />
+        <RulerValue Name="A241" Value="99.74269342751641" />
+        <RulerValue Name="A242" Value="99.74269342751641" />
+        <RulerValue Name="A243" Value="99.74269342751641" />
+        <RulerValue Name="A244" Value="99.6879480141969" />
+        <RulerValue Name="A245" Value="99.64365255228462" />
+        <RulerValue Name="A246" Value="99.74269342751641" />
+        <RulerValue Name="A247" Value="99.74269342751641" />
+        <RulerValue Name="A248" Value="99.74269342751641" />
+        <RulerValue Name="A249" Value="99.74269342751641" />
+        <RulerValue Name="A250" Value="99.74269342751641" />
+        <RulerValue Name="A251" Value="99.74269342751641" />
+        <RulerValue Name="A252" Value="99.74269342751641" />
+        <RulerValue Name="A253" Value="99.74269342751641" />
+        <RulerValue Name="A254" Value="99.74269342751641" />
+        <RulerValue Name="A255" Value="99.74269342751641" />
+        <RulerValue Name="A256" Value="99.74269342751641" />
+        <RulerValue Name="A257" Value="99.74269342751641" />
+        <RulerValue Name="A258" Value="89.9368954225423" />
+        <RulerValue Name="A259" Value="99.34643493484108" />
+        <RulerValue Name="A260" Value="99.74269342751641" />
+        <RulerValue Name="A261" Value="99.74269342751641" />
+        <RulerValue Name="A262" Value="99.74269342751641" />
+        <RulerValue Name="A263" Value="99.74269342751641" />
+        <RulerValue Name="A264" Value="99.74269342751641" />
+        <RulerValue Name="A265" Value="99.74269342751641" />
+        <RulerValue Name="A266" Value="86.91494892698805" />
+        <RulerValue Name="A267" Value="99.74269342751641" />
+        <RulerValue Name="A268" Value="99.74269342751641" />
+        <RulerValue Name="A269" Value="99.74269342751641" />
+        <RulerValue Name="A270" Value="99.54275510235145" />
+        <RulerValue Name="A271" Value="99.74269342751641" />
+        <RulerValue Name="A272" Value="99.74269342751641" />
+        <RulerValue Name="A273" Value="98.94366198455018" />
+        <RulerValue Name="A274" Value="99.74269342751641" />
+        <RulerValue Name="A275" Value="99.74269342751641" />
+        <RulerValue Name="A276" Value="99.74269342751641" />
+        <RulerValue Name="A277" Value="99.74269342751641" />
+        <RulerValue Name="A278" Value="99.74269342751641" />
+        <RulerValue Name="A279" Value="99.74269342751641" />
+        <RulerValue Name="A280" Value="99.74269342751641" />
+        <RulerValue Name="A281" Value="99.74269342751641" />
+        <RulerValue Name="A282" Value="99.74269342751641" />
+        <RulerValue Name="A283" Value="99.74269342751641" />
+        <RulerValue Name="A284" Value="98.86784818960273" />
+        <RulerValue Name="A285" Value="99.74269342751641" />
+        <RulerValue Name="A286" Value="99.74269342751641" />
+        <RulerValue Name="A287" Value="99.74269342751641" />
+        <RulerValue Name="A288" Value="99.74269342751641" />
+        <RulerValue Name="A289" Value="98.94992704549155" />
+        <RulerValue Name="A290" Value="99.74269342751641" />
+        <RulerValue Name="A291" Value="99.74269342751641" />
+        <RulerValue Name="A292" Value="99.74269342751641" />
+        <RulerValue Name="A293" Value="99.74269342751641" />
+        <RulerValue Name="A294" Value="99.30498163376409" />
+        <RulerValue Name="A295" Value="99.74269342751641" />
+        <RulerValue Name="A296" Value="99.54275510235145" />
+        <RulerValue Name="A297" Value="99.74269342751641" />
+        <RulerValue Name="A298" Value="99.74269342751641" />
+        <RulerValue Name="A299" Value="99.74269342751641" />
+        <RulerValue Name="A300" Value="99.74269342751641" />
+        <RulerValue Name="A301" Value="99.74269342751641" />
+        <RulerValue Name="A302" Value="99.74269342751641" />
+        <RulerValue Name="A303" Value="99.74269342751641" />
+        <RulerValue Name="A304" Value="97.99533851441889" />
+        <RulerValue Name="A305" Value="99.74269342751641" />
+        <RulerValue Name="A306" Value="99.74269342751641" />
+        <RulerValue Name="A307" Value="99.74269342751641" />
+        <RulerValue Name="A308" Value="99.74269342751641" />
+        <RulerValue Name="A309" Value="99.74269342751641" />
+        <RulerValue Name="A310" Value="99.6879480141969" />
+        <RulerValue Name="A311" Value="99.74269342751641" />
+        <RulerValue Name="A312" Value="93.37649934276124" />
+        <RulerValue Name="A313" Value="99.74269342751641" />
+        <RulerValue Name="A314" Value="99.74269342751641" />
+        <RulerValue Name="A315" Value="99.74269342751641" />
+        <RulerValue Name="A316" Value="99.74269342751641" />
+        <RulerValue Name="A317" Value="99.74269342751641" />
+        <RulerValue Name="A318" Value="99.74269342751641" />
+        <RulerValue Name="A319" Value="99.74269342751641" />
+        <RulerValue Name="A320" Value="99.74269342751641" />
+        <RulerValue Name="A321" Value="99.74269342751641" />
+        <RulerValue Name="A322" Value="99.74269342751641" />
+        <RulerValue Name="A323" Value="99.74269342751641" />
+        <RulerValue Name="A324" Value="99.74269342751641" />
+        <RulerValue Name="A325" Value="98.94366198455018" />
+        <RulerValue Name="A326" Value="99.74269342751641" />
+        <RulerValue Name="A327" Value="99.74269342751641" />
+        <RulerValue Name="A328" Value="99.74269342751641" />
+        <RulerValue Name="A329" Value="99.74269342751641" />
+        <RulerValue Name="A330" Value="99.74269342751641" />
+        <RulerValue Name="A331" Value="99.74269342751641" />
+        <RulerValue Name="A332" Value="99.74269342751641" />
+        <RulerValue Name="A333" Value="99.74269342751641" />
+        <RulerValue Name="A334" Value="99.74269342751641" />
+        <RulerValue Name="A335" Value="99.74269342751641" />
+        <RulerValue Name="A336" Value="99.74269342751641" />
+        <RulerValue Name="A337" Value="99.64365255228462" />
+        <RulerValue Name="A338" Value="99.74269342751641" />
+        <RulerValue Name="A339" Value="99.74269342751641" />
+        <RulerValue Name="A340" Value="99.74269342751641" />
+        <RulerValue Name="A341" Value="99.74269342751641" />
+        <RulerValue Name="A342" Value="97.99533851441889" />
+        <RulerValue Name="A343" Value="99.74269342751641" />
+        <RulerValue Name="A344" Value="99.74269342751641" />
+        <RulerValue Name="A345" Value="99.74269342751641" />
+        <RulerValue Name="A346" Value="99.74269342751641" />
+        <RulerValue Name="A347" Value="99.74269342751641" />
+        <RulerValue Name="A348" Value="99.30498163376409" />
+        <RulerValue Name="A349" Value="99.74269342751641" />
+        <RulerValue Name="A350" Value="99.74269342751641" />
+        <RulerValue Name="A351" Value="99.74269342751641" />
+        <RulerValue Name="A352" Value="99.74269342751641" />
+        <RulerValue Name="A353" Value="99.74269342751641" />
+        <RulerValue Name="A354" Value="99.74269342751641" />
+        <RulerValue Name="A355" Value="99.74269342751641" />
+        <RulerValue Name="A356" Value="99.74269342751641" />
+        <RulerValue Name="A357" Value="99.34643493484108" />
+        <RulerValue Name="A358" Value="99.74269342751641" />
+        <RulerValue Name="A359" Value="88.84729774822014" />
+        <RulerValue Name="A360" Value="99.74269342751641" />
+        <RulerValue Name="A361" Value="99.74269342751641" />
+        <RulerValue Name="A362" Value="99.34293673511036" />
+        <RulerValue Name="A363" Value="99.74269342751641" />
+        <RulerValue Name="A364" Value="99.74269342751641" />
+        <RulerValue Name="A365" Value="99.74269342751641" />
+        <RulerValue Name="A366" Value="96.25750316716807" />
+        <RulerValue Name="A367" Value="99.74269342751641" />
+        <RulerValue Name="A368" Value="99.74269342751641" />
+        <RulerValue Name="A369" Value="99.74269342751641" />
+        <RulerValue Name="A370" Value="99.74269342751641" />
+        <RulerValue Name="A371" Value="99.74269342751641" />
+        <RulerValue Name="A372" Value="99.74269342751641" />
+        <RulerValue Name="A373" Value="99.74269342751641" />
+        <RulerValue Name="A374" Value="99.74269342751641" />
+        <RulerValue Name="A375" Value="99.74269342751641" />
+        <RulerValue Name="A376" Value="99.74269342751641" />
+        <RulerValue Name="A377" Value="99.74269342751641" />
+        <RulerValue Name="A378" Value="99.74269342751641" />
+        <RulerValue Name="A379" Value="99.74269342751641" />
+        <RulerValue Name="A380" Value="99.74269342751641" />
+        <RulerValue Name="A381" Value="99.74269342751641" />
+        <RulerValue Name="A382" Value="99.74269342751641" />
+        <RulerValue Name="A383" Value="99.74269342751641" />
+        <RulerValue Name="A384" Value="99.74269342751641" />
+        <RulerValue Name="A385" Value="99.74269342751641" />
+        <RulerValue Name="A386" Value="99.74269342751641" />
+        <RulerValue Name="A387" Value="99.74269342751641" />
+        <RulerValue Name="A388" Value="99.71531960141367" />
+        <RulerValue Name="A389" Value="99.74269342751641" />
+        <RulerValue Name="A390" Value="99.74269342751641" />
+        <RulerValue Name="A391" Value="99.74269342751641" />
+        <RulerValue Name="A392" Value="99.74269342751641" />
+        <RulerValue Name="A393" Value="99.74269342751641" />
+        <RulerValue Name="A394" Value="99.74269342751641" />
+        <RulerValue Name="A395" Value="99.74269342751641" />
+        <RulerValue Name="A396" Value="99.74269342751641" />
+        <RulerValue Name="A397" Value="99.71531960141367" />
+        <RulerValue Name="A398" Value="99.74269342751641" />
+        <RulerValue Name="A399" Value="99.74269342751641" />
+        <RulerValue Name="A400" Value="99.74269342751641" />
+        <RulerValue Name="A401" Value="99.74269342751641" />
+        <RulerValue Name="A402" Value="99.74269342751641" />
+        <RulerValue Name="A403" Value="99.74269342751641" />
+        <RulerValue Name="A404" Value="99.74269342751641" />
+        <RulerValue Name="A405" Value="99.74269342751641" />
+        <RulerValue Name="A406" Value="99.74269342751641" />
+        <RulerValue Name="A407" Value="99.74269342751641" />
+        <RulerValue Name="A408" Value="99.74269342751641" />
+        <RulerValue Name="A409" Value="99.74269342751641" />
+        <RulerValue Name="A410" Value="99.74269342751641" />
+        <RulerValue Name="A411" Value="99.74269342751641" />
+        <RulerValue Name="A412" Value="99.74269342751641" />
+        <RulerValue Name="A413" Value="99.74269342751641" />
+        <RulerValue Name="A414" Value="99.74269342751641" />
+        <RulerValue Name="A415" Value="87.21045511691078" />
+        <RulerValue Name="A416" Value="93.37649934276124" />
+        <RulerValue Name="A417" Value="99.74269342751641" />
+        <RulerValue Name="A418" Value="99.74269342751641" />
+        <RulerValue Name="A419" Value="99.74269342751641" />
+        <RulerValue Name="A420" Value="99.74269342751641" />
+        <RulerValue Name="A421" Value="99.74269342751641" />
+        <RulerValue Name="A422" Value="99.74269342751641" />
+        <RulerValue Name="A423" Value="99.74269342751641" />
+        <RulerValue Name="A424" Value="99.74269342751641" />
+        <RulerValue Name="A425" Value="99.74269342751641" />
+        <RulerValue Name="A426" Value="93.40678273884541" />
+        <RulerValue Name="A427" Value="99.74269342751641" />
+        <RulerValue Name="A428" Value="99.74269342751641" />
+        <RulerValue Name="A429" Value="99.74269342751641" />
+        <RulerValue Name="A430" Value="99.74269342751641" />
+        <RulerValue Name="A431" Value="99.74269342751641" />
+        <RulerValue Name="A432" Value="96.55837059678475" />
+        <RulerValue Name="A433" Value="99.74269342751641" />
+        <RulerValue Name="A434" Value="96.25750316716807" />
+        <RulerValue Name="A435" Value="99.74269342751641" />
+        <RulerValue Name="A436" Value="99.74269342751641" />
+        <RulerValue Name="A437" Value="99.71531960141367" />
+        <RulerValue Name="A438" Value="99.74269342751641" />
+        <RulerValue Name="A439" Value="99.74269342751641" />
+        <RulerValue Name="A440" Value="99.74269342751641" />
+        <RulerValue Name="A441" Value="99.74269342751641" />
+        <RulerValue Name="A442" Value="99.74269342751641" />
+        <RulerValue Name="A443" Value="99.74269342751641" />
+        <RulerValue Name="A444" Value="99.74269342751641" />
+        <RulerValue Name="A445" Value="99.74269342751641" />
+        <RulerValue Name="A446" Value="99.74269342751641" />
+        <RulerValue Name="A447" Value="99.74269342751641" />
+        <RulerValue Name="A448" Value="99.74269342751641" />
+        <RulerValue Name="A449" Value="99.74269342751641" />
+        <RulerValue Name="A450" Value="99.74269342751641" />
+        <RulerValue Name="A451" Value="99.74269342751641" />
+        <RulerValue Name="A452" Value="99.74269342751641" />
+        <RulerValue Name="A453" Value="99.74269342751641" />
+        <RulerValue Name="A454" Value="99.74269342751641" />
+        <RulerValue Name="A455" Value="99.74269342751641" />
+        <RulerValue Name="A456" Value="99.74269342751641" />
+        <RulerValue Name="A457" Value="99.74269342751641" />
+        <RulerValue Name="A458" Value="99.74269342751641" />
+        <RulerValue Name="A459" Value="99.74269342751641" />
+        <RulerValue Name="A460" Value="99.74269342751641" />
+        <RulerValue Name="A461" Value="99.74269342751641" />
+        <RulerValue Name="A462" Value="87.21045511691078" />
+        <RulerValue Name="A463" Value="99.74269342751641" />
+        <RulerValue Name="A464" Value="99.74269342751641" />
+        <RulerValue Name="A465" Value="99.74269342751641" />
+        <RulerValue Name="A466" Value="99.30498163376409" />
+        <RulerValue Name="A467" Value="99.74269342751641" />
+        <RulerValue Name="A468" Value="99.74269342751641" />
+        <RulerValue Name="A469" Value="99.74269342751641" />
+        <RulerValue Name="A470" Value="99.74269342751641" />
+        <RulerValue Name="A471" Value="99.74269342751641" />
+        <RulerValue Name="A472" Value="98.14657519016978" />
+        <RulerValue Name="A473" Value="99.74269342751641" />
+        <RulerValue Name="A474" Value="99.74269342751641" />
+        <RulerValue Name="A475" Value="98.14657519016978" />
+        <RulerValue Name="A476" Value="99.74269342751641" />
+        <RulerValue Name="A477" Value="99.74269342751641" />
+        <RulerValue Name="A478" Value="99.74269342751641" />
+        <RulerValue Name="A479" Value="99.74269342751641" />
+        <RulerValue Name="A480" Value="99.74269342751641" />
+        <RulerValue Name="A481" Value="99.74269342751641" />
+        <RulerValue Name="A482" Value="99.74269342751641" />
+        <RulerValue Name="A483" Value="99.74269342751641" />
+        <RulerValue Name="A484" Value="99.74269342751641" />
+        <RulerValue Name="A485" Value="99.74269342751641" />
+        <RulerValue Name="A486" Value="99.74269342751641" />
+        <RulerValue Name="A487" Value="99.74269342751641" />
+        <RulerValue Name="A488" Value="99.74269342751641" />
+        <RulerValue Name="A489" Value="99.74269342751641" />
+        <RulerValue Name="A490" Value="99.74269342751641" />
+        <RulerValue Name="A491" Value="96.22524237477752" />
+        <RulerValue Name="A492" Value="99.74269342751641" />
+        <RulerValue Name="A493" Value="99.74269342751641" />
+        <RulerValue Name="A494" Value="99.74269342751641" />
+        <RulerValue Name="A495" Value="99.74269342751641" />
+        <RulerValue Name="A496" Value="99.74269342751641" />
+      </Measurement>
+    </Criterion>
+    <Criterion Name="C5" IsPreferenceIncreasing="1">
+      <Comment />
+      <Measurement Name="Ratings" Type="0" DecisionMaker="Default User" SubType="0">
+        <Comment />
+      <RulerValue Name="A1" Value="18.50912299140741" />
+        <RulerValue Name="A2" Value="0.16034102992592963" />
+        <RulerValue Name="A3" Value="18.56358400000001" />
+        <RulerValue Name="A4" Value="0.6047840000000014" />
+        <RulerValue Name="A5" Value="0.16034102992592963" />
+        <RulerValue Name="A6" Value="0.16034102992592963" />
+        <RulerValue Name="A7" Value="0.16034102992592963" />
+        <RulerValue Name="A8" Value="0.16034102992592963" />
+        <RulerValue Name="A9" Value="0.16034102992592963" />
+        <RulerValue Name="A10" Value="0.16034102992592963" />
+        <RulerValue Name="A11" Value="0.16034102992592963" />
+        <RulerValue Name="A12" Value="0.16034102992592963" />
+        <RulerValue Name="A13" Value="0.16034102992592963" />
+        <RulerValue Name="A14" Value="0.16034102992592963" />
+        <RulerValue Name="A15" Value="0.16034102992592963" />
+        <RulerValue Name="A16" Value="0.16034102992592963" />
+        <RulerValue Name="A17" Value="0.16034102992592963" />
+        <RulerValue Name="A18" Value="0.16034102992592963" />
+        <RulerValue Name="A19" Value="0.16034102992592963" />
+        <RulerValue Name="A20" Value="0.16034102992592963" />
+        <RulerValue Name="A21" Value="0.16034102992592963" />
+        <RulerValue Name="A22" Value="0.16034102992592963" />
+        <RulerValue Name="A23" Value="0.16034102992592963" />
+        <RulerValue Name="A24" Value="0.16034102992592963" />
+        <RulerValue Name="A25" Value="0.16034102992592963" />
+        <RulerValue Name="A26" Value="0.16034102992592963" />
+        <RulerValue Name="A27" Value="0.16034102992592963" />
+        <RulerValue Name="A28" Value="0.16034102992592963" />
+        <RulerValue Name="A29" Value="0.16034102992592963" />
+        <RulerValue Name="A30" Value="0.16034102992592963" />
+        <RulerValue Name="A31" Value="0.16034102992592963" />
+        <RulerValue Name="A32" Value="0.16034102992592963" />
+        <RulerValue Name="A33" Value="0.16034102992592963" />
+        <RulerValue Name="A34" Value="0.16034102992592963" />
+        <RulerValue Name="A35" Value="0.16034102992592963" />
+        <RulerValue Name="A36" Value="0.16034102992592963" />
+        <RulerValue Name="A37" Value="0.16034102992592963" />
+        <RulerValue Name="A38" Value="0.16034102992592963" />
+        <RulerValue Name="A39" Value="0.16034102992592963" />
+        <RulerValue Name="A40" Value="0.16034102992592963" />
+        <RulerValue Name="A41" Value="0.16034102992592963" />
+        <RulerValue Name="A42" Value="0.16034102992592963" />
+        <RulerValue Name="A43" Value="0.16034102992592963" />
+        <RulerValue Name="A44" Value="0.16034102992592963" />
+        <RulerValue Name="A45" Value="0.16034102992592963" />
+        <RulerValue Name="A46" Value="0.16034102992592963" />
+        <RulerValue Name="A47" Value="0.16034102992592963" />
+        <RulerValue Name="A48" Value="0.16034102992592963" />
+        <RulerValue Name="A49" Value="0.16034102992592963" />
+        <RulerValue Name="A50" Value="0.16034102992592963" />
+        <RulerValue Name="A51" Value="0.16034102992592963" />
+        <RulerValue Name="A52" Value="0.16034102992592963" />
+        <RulerValue Name="A53" Value="0.16034102992592963" />
+        <RulerValue Name="A54" Value="0.16034102992592963" />
+        <RulerValue Name="A55" Value="0.16034102992592963" />
+        <RulerValue Name="A56" Value="0.16034102992592963" />
+        <RulerValue Name="A57" Value="0.16034102992592963" />
+        <RulerValue Name="A58" Value="18.02039940740741" />
+        <RulerValue Name="A59" Value="0.16034102992592963" />
+        <RulerValue Name="A60" Value="0.16034102992592963" />
+        <RulerValue Name="A61" Value="0.16034102992592963" />
+        <RulerValue Name="A62" Value="0.16034102992592963" />
+        <RulerValue Name="A63" Value="0.16034102992592963" />
+        <RulerValue Name="A64" Value="0.16034102992592963" />
+        <RulerValue Name="A65" Value="0.16034102992592963" />
+        <RulerValue Name="A66" Value="0.16034102992592963" />
+        <RulerValue Name="A67" Value="0.16034102992592963" />
+        <RulerValue Name="A68" Value="0.16034102992592963" />
+        <RulerValue Name="A69" Value="0.16034102992592963" />
+        <RulerValue Name="A70" Value="0.16034102992592963" />
+        <RulerValue Name="A71" Value="0.16034102992592963" />
+        <RulerValue Name="A72" Value="0.16034102992592963" />
+        <RulerValue Name="A73" Value="0.16034102992592963" />
+        <RulerValue Name="A74" Value="0.16034102992592963" />
+        <RulerValue Name="A75" Value="0.16034102992592963" />
+        <RulerValue Name="A76" Value="0.16034102992592963" />
+        <RulerValue Name="A77" Value="0.16034102992592963" />
+        <RulerValue Name="A78" Value="0.16034102992592963" />
+        <RulerValue Name="A79" Value="0.16034102992592963" />
+        <RulerValue Name="A80" Value="0.16034102992592963" />
+        <RulerValue Name="A81" Value="0.16034102992592963" />
+        <RulerValue Name="A82" Value="0.16034102992592963" />
+        <RulerValue Name="A83" Value="0.16034102992592963" />
+        <RulerValue Name="A84" Value="0.16034102992592963" />
+        <RulerValue Name="A85" Value="0.16034102992592963" />
+        <RulerValue Name="A86" Value="0.16034102992592963" />
+        <RulerValue Name="A87" Value="0.16034102992592963" />
+        <RulerValue Name="A88" Value="0.16034102992592963" />
+        <RulerValue Name="A89" Value="0.16034102992592963" />
+        <RulerValue Name="A90" Value="0.16034102992592963" />
+        <RulerValue Name="A91" Value="0.16034102992592963" />
+        <RulerValue Name="A92" Value="0.16034102992592963" />
+        <RulerValue Name="A93" Value="0.16034102992592963" />
+        <RulerValue Name="A94" Value="0.16034102992592963" />
+        <RulerValue Name="A95" Value="0.16034102992592963" />
+        <RulerValue Name="A96" Value="0.16034102992592963" />
+        <RulerValue Name="A97" Value="0.16034102992592963" />
+        <RulerValue Name="A98" Value="0.16034102992592963" />
+        <RulerValue Name="A99" Value="0.16034102992592963" />
+        <RulerValue Name="A100" Value="18.02039940740741" />
+        <RulerValue Name="A101" Value="0.16034102992592963" />
+        <RulerValue Name="A102" Value="0.16034102992592963" />
+        <RulerValue Name="A103" Value="18.02039940740741" />
+        <RulerValue Name="A104" Value="0.16034102992592963" />
+        <RulerValue Name="A105" Value="0.16034102992592963" />
+        <RulerValue Name="A106" Value="0.16034102992592963" />
+        <RulerValue Name="A107" Value="0.16034102992592963" />
+        <RulerValue Name="A108" Value="0.16034102992592963" />
+        <RulerValue Name="A109" Value="0.16034102992592963" />
+        <RulerValue Name="A110" Value="0.16034102992592963" />
+        <RulerValue Name="A111" Value="0.16034102992592963" />
+        <RulerValue Name="A112" Value="0.16034102992592963" />
+        <RulerValue Name="A113" Value="0.16034102992592963" />
+        <RulerValue Name="A114" Value="0.16034102992592963" />
+        <RulerValue Name="A115" Value="0.16034102992592963" />
+        <RulerValue Name="A116" Value="0.16034102992592963" />
+        <RulerValue Name="A117" Value="0.16034102992592963" />
+        <RulerValue Name="A118" Value="0.16034102992592963" />
+        <RulerValue Name="A119" Value="0.16034102992592963" />
+        <RulerValue Name="A120" Value="0.16034102992592963" />
+        <RulerValue Name="A121" Value="0.16034102992592963" />
+        <RulerValue Name="A122" Value="0.16034102992592963" />
+        <RulerValue Name="A123" Value="0.16034102992592963" />
+        <RulerValue Name="A124" Value="0.16034102992592963" />
+        <RulerValue Name="A125" Value="0.16034102992592963" />
+        <RulerValue Name="A126" Value="0.16034102992592963" />
+        <RulerValue Name="A127" Value="0.16034102992592963" />
+        <RulerValue Name="A128" Value="0.16034102992592963" />
+        <RulerValue Name="A129" Value="0.16034102992592963" />
+        <RulerValue Name="A130" Value="0.16034102992592963" />
+        <RulerValue Name="A131" Value="0.16034102992592963" />
+        <RulerValue Name="A132" Value="0.16034102992592963" />
+        <RulerValue Name="A133" Value="0.16034102992592963" />
+        <RulerValue Name="A134" Value="0.16034102992592963" />
+        <RulerValue Name="A135" Value="0.16034102992592963" />
+        <RulerValue Name="A136" Value="0.16034102992592963" />
+        <RulerValue Name="A137" Value="0.16034102992592963" />
+        <RulerValue Name="A138" Value="0.16034102992592963" />
+        <RulerValue Name="A139" Value="0.16034102992592963" />
+        <RulerValue Name="A140" Value="0.16034102992592963" />
+        <RulerValue Name="A141" Value="0.16034102992592963" />
+        <RulerValue Name="A142" Value="0.16034102992592963" />
+        <RulerValue Name="A143" Value="0.16034102992592963" />
+        <RulerValue Name="A144" Value="0.16034102992592963" />
+        <RulerValue Name="A145" Value="0.16034102992592963" />
+        <RulerValue Name="A146" Value="0.16034102992592963" />
+        <RulerValue Name="A147" Value="0.16034102992592963" />
+        <RulerValue Name="A148" Value="0.16034102992592963" />
+        <RulerValue Name="A149" Value="0.16034102992592963" />
+        <RulerValue Name="A150" Value="0.16034102992592963" />
+        <RulerValue Name="A151" Value="0.16034102992592963" />
+        <RulerValue Name="A152" Value="0.16034102992592963" />
+        <RulerValue Name="A153" Value="0.16034102992592963" />
+        <RulerValue Name="A154" Value="0.16034102992592963" />
+        <RulerValue Name="A155" Value="0.16034102992592963" />
+        <RulerValue Name="A156" Value="0.16034102992592963" />
+        <RulerValue Name="A157" Value="0.16034102992592963" />
+        <RulerValue Name="A158" Value="0.16034102992592963" />
+        <RulerValue Name="A159" Value="0.16034102992592963" />
+        <RulerValue Name="A160" Value="0.16034102992592963" />
+        <RulerValue Name="A161" Value="0.16034102992592963" />
+        <RulerValue Name="A162" Value="0.16034102992592963" />
+        <RulerValue Name="A163" Value="0.16034102992592963" />
+        <RulerValue Name="A164" Value="0.16034102992592963" />
+        <RulerValue Name="A165" Value="0.16034102992592963" />
+        <RulerValue Name="A166" Value="0.16034102992592963" />
+        <RulerValue Name="A167" Value="0.16034102992592963" />
+        <RulerValue Name="A168" Value="0.16034102992592963" />
+        <RulerValue Name="A169" Value="0.16034102992592963" />
+        <RulerValue Name="A170" Value="0.16034102992592963" />
+        <RulerValue Name="A171" Value="0.16034102992592963" />
+        <RulerValue Name="A172" Value="0.16034102992592963" />
+        <RulerValue Name="A173" Value="0.16034102992592963" />
+        <RulerValue Name="A174" Value="0.16034102992592963" />
+        <RulerValue Name="A175" Value="0.16034102992592963" />
+        <RulerValue Name="A176" Value="0.16034102992592963" />
+        <RulerValue Name="A177" Value="0.16034102992592963" />
+        <RulerValue Name="A178" Value="0.16034102992592963" />
+        <RulerValue Name="A179" Value="0.16034102992592963" />
+        <RulerValue Name="A180" Value="0.16034102992592963" />
+        <RulerValue Name="A181" Value="0.16034102992592963" />
+        <RulerValue Name="A182" Value="0.16034102992592963" />
+        <RulerValue Name="A183" Value="0.16034102992592963" />
+        <RulerValue Name="A184" Value="0.16034102992592963" />
+        <RulerValue Name="A185" Value="0.16034102992592963" />
+        <RulerValue Name="A186" Value="0.16034102992592963" />
+        <RulerValue Name="A187" Value="0.16034102992592963" />
+        <RulerValue Name="A188" Value="0.16034102992592963" />
+        <RulerValue Name="A189" Value="0.16034102992592963" />
+        <RulerValue Name="A190" Value="0.16034102992592963" />
+        <RulerValue Name="A191" Value="0.16034102992592963" />
+        <RulerValue Name="A192" Value="0.16034102992592963" />
+        <RulerValue Name="A193" Value="0.16034102992592963" />
+        <RulerValue Name="A194" Value="0.16034102992592963" />
+        <RulerValue Name="A195" Value="0.16034102992592963" />
+        <RulerValue Name="A196" Value="0.16034102992592963" />
+        <RulerValue Name="A197" Value="0.16034102992592963" />
+        <RulerValue Name="A198" Value="0.16034102992592963" />
+        <RulerValue Name="A199" Value="0.16034102992592963" />
+        <RulerValue Name="A200" Value="0.16034102992592963" />
+        <RulerValue Name="A201" Value="0.16034102992592963" />
+        <RulerValue Name="A202" Value="0.16034102992592963" />
+        <RulerValue Name="A203" Value="0.16034102992592963" />
+        <RulerValue Name="A204" Value="0.16034102992592963" />
+        <RulerValue Name="A205" Value="0.16034102992592963" />
+        <RulerValue Name="A206" Value="0.16034102992592963" />
+        <RulerValue Name="A207" Value="0.16034102992592963" />
+        <RulerValue Name="A208" Value="0.16034102992592963" />
+        <RulerValue Name="A209" Value="0.16034102992592963" />
+        <RulerValue Name="A210" Value="0.16034102992592963" />
+        <RulerValue Name="A211" Value="0.16034102992592963" />
+        <RulerValue Name="A212" Value="0.16034102992592963" />
+        <RulerValue Name="A213" Value="0.16034102992592963" />
+        <RulerValue Name="A214" Value="0.16034102992592963" />
+        <RulerValue Name="A215" Value="0.16034102992592963" />
+        <RulerValue Name="A216" Value="0.16034102992592963" />
+        <RulerValue Name="A217" Value="0.16034102992592963" />
+        <RulerValue Name="A218" Value="0.16034102992592963" />
+        <RulerValue Name="A219" Value="0.16034102992592963" />
+        <RulerValue Name="A220" Value="0.16034102992592963" />
+        <RulerValue Name="A221" Value="0.16034102992592963" />
+        <RulerValue Name="A222" Value="0.16034102992592963" />
+        <RulerValue Name="A223" Value="0.16034102992592963" />
+        <RulerValue Name="A224" Value="0.16034102992592963" />
+        <RulerValue Name="A225" Value="0.16034102992592963" />
+        <RulerValue Name="A226" Value="0.16034102992592963" />
+        <RulerValue Name="A227" Value="0.16034102992592963" />
+        <RulerValue Name="A228" Value="0.16034102992592963" />
+        <RulerValue Name="A229" Value="0.16034102992592963" />
+        <RulerValue Name="A230" Value="0.16034102992592963" />
+        <RulerValue Name="A231" Value="0.16034102992592963" />
+        <RulerValue Name="A232" Value="0.16034102992592963" />
+        <RulerValue Name="A233" Value="0.16034102992592963" />
+        <RulerValue Name="A234" Value="0.16034102992592963" />
+        <RulerValue Name="A235" Value="0.16034102992592963" />
+        <RulerValue Name="A236" Value="0.16034102992592963" />
+        <RulerValue Name="A237" Value="0.16034102992592963" />
+        <RulerValue Name="A238" Value="0.16034102992592963" />
+        <RulerValue Name="A239" Value="0.16034102992592963" />
+        <RulerValue Name="A240" Value="0.16034102992592963" />
+        <RulerValue Name="A241" Value="0.16034102992592963" />
+        <RulerValue Name="A242" Value="0.16034102992592963" />
+        <RulerValue Name="A243" Value="0.16034102992592963" />
+        <RulerValue Name="A244" Value="0.16034102992592963" />
+        <RulerValue Name="A245" Value="0.16034102992592963" />
+        <RulerValue Name="A246" Value="0.16034102992592963" />
+        <RulerValue Name="A247" Value="0.16034102992592963" />
+        <RulerValue Name="A248" Value="0.16034102992592963" />
+        <RulerValue Name="A249" Value="0.16034102992592963" />
+        <RulerValue Name="A250" Value="0.16034102992592963" />
+        <RulerValue Name="A251" Value="0.16034102992592963" />
+        <RulerValue Name="A252" Value="0.16034102992592963" />
+        <RulerValue Name="A253" Value="0.16034102992592963" />
+        <RulerValue Name="A254" Value="0.16034102992592963" />
+        <RulerValue Name="A255" Value="0.16034102992592963" />
+        <RulerValue Name="A256" Value="0.16034102992592963" />
+        <RulerValue Name="A257" Value="0.16034102992592963" />
+        <RulerValue Name="A258" Value="2.306068783407417" />
+        <RulerValue Name="A259" Value="0.16034102992592963" />
+        <RulerValue Name="A260" Value="0.16034102992592963" />
+        <RulerValue Name="A261" Value="0.16034102992592963" />
+        <RulerValue Name="A262" Value="0.16034102992592963" />
+        <RulerValue Name="A263" Value="0.16034102992592963" />
+        <RulerValue Name="A264" Value="0.16034102992592963" />
+        <RulerValue Name="A265" Value="0.16034102992592963" />
+        <RulerValue Name="A266" Value="0.16034102992592963" />
+        <RulerValue Name="A267" Value="0.16034102992592963" />
+        <RulerValue Name="A268" Value="0.16034102992592963" />
+        <RulerValue Name="A269" Value="0.16034102992592963" />
+        <RulerValue Name="A270" Value="0.16034102992592963" />
+        <RulerValue Name="A271" Value="0.16034102992592963" />
+        <RulerValue Name="A272" Value="0.16034102992592963" />
+        <RulerValue Name="A273" Value="0.16034102992592963" />
+        <RulerValue Name="A274" Value="0.16034102992592963" />
+        <RulerValue Name="A275" Value="0.16034102992592963" />
+        <RulerValue Name="A276" Value="0.16034102992592963" />
+        <RulerValue Name="A277" Value="0.16034102992592963" />
+        <RulerValue Name="A278" Value="0.16034102992592963" />
+        <RulerValue Name="A279" Value="0.16034102992592963" />
+        <RulerValue Name="A280" Value="0.16034102992592963" />
+        <RulerValue Name="A281" Value="0.16034102992592963" />
+        <RulerValue Name="A282" Value="0.16034102992592963" />
+        <RulerValue Name="A283" Value="0.16034102992592963" />
+        <RulerValue Name="A284" Value="0.16034102992592963" />
+        <RulerValue Name="A285" Value="0.16034102992592963" />
+        <RulerValue Name="A286" Value="0.16034102992592963" />
+        <RulerValue Name="A287" Value="0.16034102992592963" />
+        <RulerValue Name="A288" Value="0.16034102992592963" />
+        <RulerValue Name="A289" Value="0.16034102992592963" />
+        <RulerValue Name="A290" Value="0.16034102992592963" />
+        <RulerValue Name="A291" Value="0.16034102992592963" />
+        <RulerValue Name="A292" Value="0.16034102992592963" />
+        <RulerValue Name="A293" Value="0.16034102992592963" />
+        <RulerValue Name="A294" Value="0.16034102992592963" />
+        <RulerValue Name="A295" Value="0.16034102992592963" />
+        <RulerValue Name="A296" Value="0.16034102992592963" />
+        <RulerValue Name="A297" Value="0.16034102992592963" />
+        <RulerValue Name="A298" Value="0.16034102992592963" />
+        <RulerValue Name="A299" Value="0.16034102992592963" />
+        <RulerValue Name="A300" Value="0.16034102992592963" />
+        <RulerValue Name="A301" Value="0.16034102992592963" />
+        <RulerValue Name="A302" Value="0.16034102992592963" />
+        <RulerValue Name="A303" Value="0.16034102992592963" />
+        <RulerValue Name="A304" Value="0.16034102992592963" />
+        <RulerValue Name="A305" Value="0.16034102992592963" />
+        <RulerValue Name="A306" Value="0.16034102992592963" />
+        <RulerValue Name="A307" Value="0.16034102992592963" />
+        <RulerValue Name="A308" Value="0.16034102992592963" />
+        <RulerValue Name="A309" Value="0.16034102992592963" />
+        <RulerValue Name="A310" Value="0.16034102992592963" />
+        <RulerValue Name="A311" Value="0.16034102992592963" />
+        <RulerValue Name="A312" Value="0.16034102992592963" />
+        <RulerValue Name="A313" Value="0.16034102992592963" />
+        <RulerValue Name="A314" Value="0.16034102992592963" />
+        <RulerValue Name="A315" Value="0.16034102992592963" />
+        <RulerValue Name="A316" Value="0.16034102992592963" />
+        <RulerValue Name="A317" Value="0.16034102992592963" />
+        <RulerValue Name="A318" Value="0.16034102992592963" />
+        <RulerValue Name="A319" Value="0.16034102992592963" />
+        <RulerValue Name="A320" Value="0.16034102992592963" />
+        <RulerValue Name="A321" Value="0.16034102992592963" />
+        <RulerValue Name="A322" Value="0.16034102992592963" />
+        <RulerValue Name="A323" Value="0.16034102992592963" />
+        <RulerValue Name="A324" Value="0.16034102992592963" />
+        <RulerValue Name="A325" Value="0.16034102992592963" />
+        <RulerValue Name="A326" Value="0.16034102992592963" />
+        <RulerValue Name="A327" Value="0.16034102992592963" />
+        <RulerValue Name="A328" Value="0.16034102992592963" />
+        <RulerValue Name="A329" Value="0.16034102992592963" />
+        <RulerValue Name="A330" Value="0.16034102992592963" />
+        <RulerValue Name="A331" Value="0.16034102992592963" />
+        <RulerValue Name="A332" Value="0.16034102992592963" />
+        <RulerValue Name="A333" Value="0.16034102992592963" />
+        <RulerValue Name="A334" Value="0.16034102992592963" />
+        <RulerValue Name="A335" Value="0.16034102992592963" />
+        <RulerValue Name="A336" Value="0.16034102992592963" />
+        <RulerValue Name="A337" Value="0.16034102992592963" />
+        <RulerValue Name="A338" Value="0.16034102992592963" />
+        <RulerValue Name="A339" Value="0.16034102992592963" />
+        <RulerValue Name="A340" Value="0.16034102992592963" />
+        <RulerValue Name="A341" Value="0.16034102992592963" />
+        <RulerValue Name="A342" Value="0.16034102992592963" />
+        <RulerValue Name="A343" Value="0.16034102992592963" />
+        <RulerValue Name="A344" Value="0.16034102992592963" />
+        <RulerValue Name="A345" Value="0.16034102992592963" />
+        <RulerValue Name="A346" Value="0.16034102992592963" />
+        <RulerValue Name="A347" Value="0.16034102992592963" />
+        <RulerValue Name="A348" Value="0.16034102992592963" />
+        <RulerValue Name="A349" Value="0.16034102992592963" />
+        <RulerValue Name="A350" Value="0.16034102992592963" />
+        <RulerValue Name="A351" Value="0.16034102992592963" />
+        <RulerValue Name="A352" Value="0.16034102992592963" />
+        <RulerValue Name="A353" Value="0.16034102992592963" />
+        <RulerValue Name="A354" Value="0.16034102992592963" />
+        <RulerValue Name="A355" Value="0.16034102992592963" />
+        <RulerValue Name="A356" Value="0.16034102992592963" />
+        <RulerValue Name="A357" Value="0.16034102992592963" />
+        <RulerValue Name="A358" Value="0.16034102992592963" />
+        <RulerValue Name="A359" Value="2.9888225280000102" />
+        <RulerValue Name="A360" Value="0.16034102992592963" />
+        <RulerValue Name="A361" Value="0.16034102992592963" />
+        <RulerValue Name="A362" Value="0.16034102992592963" />
+        <RulerValue Name="A363" Value="0.16034102992592963" />
+        <RulerValue Name="A364" Value="0.16034102992592963" />
+        <RulerValue Name="A365" Value="0.16034102992592963" />
+        <RulerValue Name="A366" Value="0.16034102992592963" />
+        <RulerValue Name="A367" Value="0.16034102992592963" />
+        <RulerValue Name="A368" Value="0.16034102992592963" />
+        <RulerValue Name="A369" Value="0.16034102992592963" />
+        <RulerValue Name="A370" Value="0.16034102992592963" />
+        <RulerValue Name="A371" Value="0.16034102992592963" />
+        <RulerValue Name="A372" Value="0.16034102992592963" />
+        <RulerValue Name="A373" Value="0.16034102992592963" />
+        <RulerValue Name="A374" Value="0.16034102992592963" />
+        <RulerValue Name="A375" Value="0.16034102992592963" />
+        <RulerValue Name="A376" Value="0.16034102992592963" />
+        <RulerValue Name="A377" Value="0.16034102992592963" />
+        <RulerValue Name="A378" Value="0.16034102992592963" />
+        <RulerValue Name="A379" Value="0.16034102992592963" />
+        <RulerValue Name="A380" Value="0.16034102992592963" />
+        <RulerValue Name="A381" Value="0.16034102992592963" />
+        <RulerValue Name="A382" Value="0.16034102992592963" />
+        <RulerValue Name="A383" Value="0.16034102992592963" />
+        <RulerValue Name="A384" Value="0.16034102992592963" />
+        <RulerValue Name="A385" Value="0.16034102992592963" />
+        <RulerValue Name="A386" Value="0.16034102992592963" />
+        <RulerValue Name="A387" Value="0.16034102992592963" />
+        <RulerValue Name="A388" Value="0.16034102992592963" />
+        <RulerValue Name="A389" Value="0.16034102992592963" />
+        <RulerValue Name="A390" Value="0.16034102992592963" />
+        <RulerValue Name="A391" Value="0.16034102992592963" />
+        <RulerValue Name="A392" Value="0.16034102992592963" />
+        <RulerValue Name="A393" Value="0.16034102992592963" />
+        <RulerValue Name="A394" Value="0.16034102992592963" />
+        <RulerValue Name="A395" Value="0.16034102992592963" />
+        <RulerValue Name="A396" Value="0.16034102992592963" />
+        <RulerValue Name="A397" Value="0.16034102992592963" />
+        <RulerValue Name="A398" Value="0.16034102992592963" />
+        <RulerValue Name="A399" Value="0.16034102992592963" />
+        <RulerValue Name="A400" Value="0.16034102992592963" />
+        <RulerValue Name="A401" Value="0.16034102992592963" />
+        <RulerValue Name="A402" Value="0.16034102992592963" />
+        <RulerValue Name="A403" Value="0.16034102992592963" />
+        <RulerValue Name="A404" Value="0.16034102992592963" />
+        <RulerValue Name="A405" Value="0.16034102992592963" />
+        <RulerValue Name="A406" Value="0.16034102992592963" />
+        <RulerValue Name="A407" Value="0.16034102992592963" />
+        <RulerValue Name="A408" Value="0.16034102992592963" />
+        <RulerValue Name="A409" Value="0.16034102992592963" />
+        <RulerValue Name="A410" Value="0.16034102992592963" />
+        <RulerValue Name="A411" Value="0.16034102992592963" />
+        <RulerValue Name="A412" Value="0.16034102992592963" />
+        <RulerValue Name="A413" Value="0.16034102992592963" />
+        <RulerValue Name="A414" Value="0.16034102992592963" />
+        <RulerValue Name="A415" Value="0.16034102992592963" />
+        <RulerValue Name="A416" Value="0.16034102992592963" />
+        <RulerValue Name="A417" Value="0.16034102992592963" />
+        <RulerValue Name="A418" Value="0.16034102992592963" />
+        <RulerValue Name="A419" Value="0.16034102992592963" />
+        <RulerValue Name="A420" Value="0.16034102992592963" />
+        <RulerValue Name="A421" Value="0.16034102992592963" />
+        <RulerValue Name="A422" Value="0.16034102992592963" />
+        <RulerValue Name="A423" Value="0.16034102992592963" />
+        <RulerValue Name="A424" Value="0.16034102992592963" />
+        <RulerValue Name="A425" Value="0.16034102992592963" />
+        <RulerValue Name="A426" Value="0.16034102992592963" />
+        <RulerValue Name="A427" Value="0.16034102992592963" />
+        <RulerValue Name="A428" Value="0.16034102992592963" />
+        <RulerValue Name="A429" Value="0.16034102992592963" />
+        <RulerValue Name="A430" Value="0.16034102992592963" />
+        <RulerValue Name="A431" Value="0.16034102992592963" />
+        <RulerValue Name="A432" Value="0.16034102992592963" />
+        <RulerValue Name="A433" Value="0.16034102992592963" />
+        <RulerValue Name="A434" Value="0.16034102992592963" />
+        <RulerValue Name="A435" Value="0.16034102992592963" />
+        <RulerValue Name="A436" Value="0.16034102992592963" />
+        <RulerValue Name="A437" Value="0.16034102992592963" />
+        <RulerValue Name="A438" Value="0.16034102992592963" />
+        <RulerValue Name="A439" Value="0.16034102992592963" />
+        <RulerValue Name="A440" Value="0.16034102992592963" />
+        <RulerValue Name="A441" Value="0.16034102992592963" />
+        <RulerValue Name="A442" Value="0.16034102992592963" />
+        <RulerValue Name="A443" Value="0.16034102992592963" />
+        <RulerValue Name="A444" Value="0.16034102992592963" />
+        <RulerValue Name="A445" Value="0.16034102992592963" />
+        <RulerValue Name="A446" Value="0.16034102992592963" />
+        <RulerValue Name="A447" Value="0.16034102992592963" />
+        <RulerValue Name="A448" Value="0.16034102992592963" />
+        <RulerValue Name="A449" Value="0.16034102992592963" />
+        <RulerValue Name="A450" Value="0.16034102992592963" />
+        <RulerValue Name="A451" Value="0.16034102992592963" />
+        <RulerValue Name="A452" Value="0.16034102992592963" />
+        <RulerValue Name="A453" Value="0.16034102992592963" />
+        <RulerValue Name="A454" Value="0.16034102992592963" />
+        <RulerValue Name="A455" Value="0.16034102992592963" />
+        <RulerValue Name="A456" Value="0.16034102992592963" />
+        <RulerValue Name="A457" Value="0.16034102992592963" />
+        <RulerValue Name="A458" Value="0.16034102992592963" />
+        <RulerValue Name="A459" Value="0.16034102992592963" />
+        <RulerValue Name="A460" Value="0.16034102992592963" />
+        <RulerValue Name="A461" Value="0.16034102992592963" />
+        <RulerValue Name="A462" Value="0.16034102992592963" />
+        <RulerValue Name="A463" Value="0.16034102992592963" />
+        <RulerValue Name="A464" Value="0.16034102992592963" />
+        <RulerValue Name="A465" Value="0.16034102992592963" />
+        <RulerValue Name="A466" Value="0.16034102992592963" />
+        <RulerValue Name="A467" Value="0.16034102992592963" />
+        <RulerValue Name="A468" Value="0.16034102992592963" />
+        <RulerValue Name="A469" Value="0.16034102992592963" />
+        <RulerValue Name="A470" Value="0.16034102992592963" />
+        <RulerValue Name="A471" Value="0.16034102992592963" />
+        <RulerValue Name="A472" Value="0.16034102992592963" />
+        <RulerValue Name="A473" Value="0.16034102992592963" />
+        <RulerValue Name="A474" Value="0.16034102992592963" />
+        <RulerValue Name="A475" Value="0.16034102992592963" />
+        <RulerValue Name="A476" Value="0.16034102992592963" />
+        <RulerValue Name="A477" Value="0.16034102992592963" />
+        <RulerValue Name="A478" Value="0.16034102992592963" />
+        <RulerValue Name="A479" Value="0.16034102992592963" />
+        <RulerValue Name="A480" Value="0.16034102992592963" />
+        <RulerValue Name="A481" Value="0.16034102992592963" />
+        <RulerValue Name="A482" Value="0.16034102992592963" />
+        <RulerValue Name="A483" Value="0.16034102992592963" />
+        <RulerValue Name="A484" Value="0.16034102992592963" />
+        <RulerValue Name="A485" Value="0.16034102992592963" />
+        <RulerValue Name="A486" Value="0.16034102992592963" />
+        <RulerValue Name="A487" Value="0.16034102992592963" />
+        <RulerValue Name="A488" Value="0.16034102992592963" />
+        <RulerValue Name="A489" Value="0.16034102992592963" />
+        <RulerValue Name="A490" Value="0.16034102992592963" />
+        <RulerValue Name="A491" Value="2.4332876847407476" />
+        <RulerValue Name="A492" Value="0.16034102992592963" />
+        <RulerValue Name="A493" Value="0.16034102992592963" />
+        <RulerValue Name="A494" Value="0.16034102992592963" />
+        <RulerValue Name="A495" Value="0.16034102992592963" />
+        <RulerValue Name="A496" Value="0.16034102992592963" />
+      </Measurement>
+    </Criterion>
+    <Measurement Name="Criteria Weights" Type="1" DecisionMaker="Default User" SubType="0">
+      <Comment />
+      <RulerValue Name="C1" Value="0.2" />
+      <RulerValue Name="C2" Value="0.2" />
+      <RulerValue Name="C3" Value="0.2" />
+      <RulerValue Name="C4" Value="0.2" />
+      <RulerValue Name="C5" Value="0.2" />
+    </Measurement>
+  </Criterion>
+</Model>
