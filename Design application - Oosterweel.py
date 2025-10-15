@@ -51,12 +51,16 @@ b3Height = 10.0
 b4Thickness = 1.5 # we dont know
 b5LaneWidth = 3.5 # we dont know
 b6SpeedLimit = 80 # we dont know
+b7Density = 50.0 # we dont know
+b8Machines = 8 # we dont know
+b9Politian = 1.0 # we dont know
 TotalWidth = 42.0
 ConstructionTime = 7.0
 TotalCost = 325  # we dont know
 TotalCO2 = 86 # kton
-Capacity = 8000
+Capacity = 8000 # we dont know
 
+start_Points_population = [b1Len, b2Lanes, b3Height, b4Thickness, b5LaneWidth, b6SpeedLimit, b7Density, b8Machines, b9Politian]
 
 # todo: change the variable names according to the case at hand
 strCost = 'Cost'
@@ -407,7 +411,7 @@ for i in range(2):
 
     # Run the GA and print its result
     print(f'Run GA with {paradigm[i]}')
-    ga = GeneticAlgorithm(objective=objective, constraints=cons, bounds=bounds, options=options)
+    ga = GeneticAlgorithm(objective=objective, constraints=cons, bounds=bounds, options=options, start_points_population=None)
     score_IMAP, design_variables_IMAP, _ = ga.run()
 
     # Print the optimal result in a readable format
