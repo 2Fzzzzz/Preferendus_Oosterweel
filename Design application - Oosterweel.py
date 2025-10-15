@@ -17,18 +17,18 @@ from scipy.optimize import fsolve
 
 from genetic_algorithm_pfm import GeneticAlgorithm
 
-w1 = 1   #City of Antwerp
-w2 = 0   #Inhabitants
-w3 = 0   #Lantis(Project manager)
-w4 = 0   #Enviromental Group
-w5 = 0   #Contractor
+w1 = 0.2   #City of Antwerp
+w2 = 0.2   #Inhabitants
+w3 = 0.2   #Lantis(Project manager)
+w4 = 0.2   #Enviromental Group
+w5 = 0.2   #Contractor
 
 # todo: change the points and preference scores according to the case at hand
 # The Preference scores (p_points) and corresponding Objective results (x_points)
 X_POINTS_COST, P_POINTS_COST = [[300, 325, 600], [100, 60, 0]]         #Cost (M€)
 X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[4000, 60000, 120000], [0, 50, 100]]       #Capacity
 X_POINTS_ConsTime, P_POINTS_ConsTime = [[6.8, 12, 27.1], [100, 40, 0]]     #Construction time
-X_POINTS_CO2, P_POINTS_CO2 = [[140760, 272000, 403200], [100, 30, 0]]                 #CO2 emissions (ton)   
+X_POINTS_CO2, P_POINTS_CO2 = [[70.38, 136.00, 201.60], [100, 30, 0]]      #CO2 emissions (kton)   
 X_POINTS_Profit, P_POINTS_Profit = [[60, 90, 120], [0, 40, 100]]      #Profit (M€)
 
 # todo: change the bounds according to the case at hand
@@ -44,6 +44,20 @@ b8 = [1, 10]            #Number of machines X8
 b9 = [0.2, 1.0]         #Politian factor X9
 bounds = [b1, b2, b3, b4, b5, b6, b7, b8, b9]
 
+# Actual number of variables
+b1Len = 1800
+b2Lanes = 6
+b3Height = 10.0
+b4Thickness = 1.5 # we dont know
+b5LaneWidth = 3.5 # we dont know
+b6SpeedLimit = 80 # we dont know
+TotalWidth = 42.0
+ConstructionTime = 7.0
+TotalCost = 325  # we dont know
+TotalCO2 = 86 # kton
+Capacity = 8000
+
+
 # todo: change the variable names according to the case at hand
 strCost = 'Cost'
 strCapacity = 'Capacity'
@@ -53,7 +67,7 @@ str5 = 'Profit'
 strTitleXCost = strCost + ' (M€)'
 strTitleXCapacity = strCapacity + ''
 strTitleX3 = str3 + ' (years)'
-strTitleX4 = str4 + ' (ton)'
+strTitleX4 = str4 + ' (Bton)'
 strTitleX5 = str5 + ' (M€)'
 strTitleY = 'Preference score'
 
@@ -64,7 +78,7 @@ def calculate_capacity(x1, x2, x3, x4, x5, x6, x7, x8, x9):
 def calculate_construction_time(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     return (x1 * x2 / (x8 * x9)) ** 0.3
 def calculate_CO2_emissions(x1, x2, x3, x4, x5, x6, x7, x8, x9):
-    return x1 * (x3 + 2 * x4) * (x2 * x5 + 2 * x4)
+    return x1 * (x3 + 2 * x4) * (x2 * x5 + 2 * x4) * 0.0005 # in kton
 def calculate_profit(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     return calculate_cost(x1, x2, x3, x4, x5, x6, x7, x8, x9) * 0.2
 
@@ -346,8 +360,8 @@ fig.savefig("Oosterweel.png")
 
 # We run the optimization with two paradigms
 paradigm = ['minmax', 'tetra']
-marker = ['o', '*']
-colours = ['orange', 'green']
+marker = ['o', '*', "s"]
+colours = ['orange', 'green', 'red']
 
 # Define the figure and axes before the loop
 fig = plt.figure(figsize=(12, 8))
@@ -437,6 +451,23 @@ for i in range(2):
     ax3.scatter(c3_res, p3_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
     ax4.scatter(c4_res, p4_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
     ax5.scatter(c5_res, p5_res, label='Optimal solution ' + paradigm[i], color=colours[i], marker=marker[i])
+
+# Plot actual numbers in the projects
+c1_Act = TotalCost
+c2_Act = Capacity
+c3_Act = ConstructionTime
+c4_Act = TotalCO2
+c5_Act = TotalCost * 0.2
+p1_Act = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, c1_Act)
+p2_Act = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, c2_Act)
+p3_Act = pchip_interpolate(X_POINTS_ConsTime, P_POINTS_ConsTime, c3_Act)
+p4_Act = pchip_interpolate(X_POINTS_CO2, P_POINTS_CO2, c4_Act)
+p5_Act = pchip_interpolate(X_POINTS_Profit, P_POINTS_Profit, c5_Act)
+ax1.scatter(c1_Act, p1_Act, label='Actual solution', color=colours[2], marker=marker[2])
+ax2.scatter(c2_Act, p2_Act, label='Actual solution', color=colours[2], marker=marker[2])
+ax3.scatter(c3_Act, p3_Act, label='Actual solution', color=colours[2], marker=marker[2])
+ax4.scatter(c4_Act, p4_Act, label='Actual solution', color=colours[2], marker=marker[2])
+ax5.scatter(c5_Act, p5_Act, label='Actual solution', color=colours[2], marker=marker[2])
 
 # Add legends and set titles for each subplot
 ax1.legend()
