@@ -26,20 +26,20 @@ w5 = 0.2   #Contractor
 # todo: change the points and preference scores according to the case at hand
 # The Preference scores (p_points) and corresponding Objective results (x_points)
 X_POINTS_COST, P_POINTS_COST = [[300, 325, 600], [100, 60, 0]]         #Cost (M€)
-X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[4000, 60000, 120000], [0, 50, 100]]       #Capacity
+X_POINTS_CAPACITY, P_POINTS_CAPACITY = [[4000, 11000, 18000], [0, 50, 100]]       #Capacity
 X_POINTS_ConsTime, P_POINTS_ConsTime = [[6.8, 12, 27.1], [100, 40, 0]]     #Construction time
-X_POINTS_CO2, P_POINTS_CO2 = [[70.38, 136.00, 201.60], [100, 30, 0]]      #CO2 emissions (kton)   
+X_POINTS_CO2, P_POINTS_CO2 = [[93.84, 173.0, 252], [100, 30, 0]]      #CO2 emissions (kton)   
 X_POINTS_Profit, P_POINTS_Profit = [[60, 90, 120], [0, 40, 100]]      #Profit (M€)
 
 # todo: change the bounds according to the case at hand
 # set bounds for all variables
 b1 = [1500, 2000]       #Tunnel Length(m) X1
 b2 = [4, 6]             #Lanes X2
-b3 = [4.5, 5.0]         #Height(m) X3
+b3 = [5.8, 6.0]         #Inner Height(m) X3
 b4 = [1.2, 1.5]         #Thickness(m) X4
 b5 = [2.8, 3.7]         #Lane width(m) X5
 b6 = [50, 100]          #Speed limit(km/h) X6
-b7 = [20, 200]          #Density(cars/km) X7
+b7 = [10, 30]          #Density(cars/km) X7
 b8 = [1, 10]            #Number of machines X8
 b9 = [0.2, 1.0]         #Politian factor X9
 bounds = [b1, b2, b3, b4, b5, b6, b7, b8, b9]
@@ -47,20 +47,22 @@ bounds = [b1, b2, b3, b4, b5, b6, b7, b8, b9]
 # Actual number of variables
 b1Len = 1800
 b2Lanes = 6
-b3Height = 10.0
+b3Height = 5.8 
 b4Thickness = 1.5 # we dont know
 b5LaneWidth = 3.5 # we dont know
 b6SpeedLimit = 80 # we dont know
-b7Density = 50.0 # we dont know
+b7Density = 20.0 # we dont know
 b8Machines = 8 # we dont know
 b9Politian = 1.0 # we dont know
+TotalHeight = 10.0 # = InnerHeight + 2*Thickness + 1m ballast
 TotalWidth = 42.0
 ConstructionTime = 7.0
-TotalCost = 325  # we dont know
-TotalCO2 = 86 # kton
-Capacity = 8000 # we dont know
+TotalCost = 500  # we dont know
+TotalCO2 = 210 # kton
+Capacity = 9300 # we dont know
 
 start_Points_population = [b1Len, b2Lanes, b3Height, b4Thickness, b5LaneWidth, b6SpeedLimit, b7Density, b8Machines, b9Politian]
+#start_Points_population = [325, 60000, 12, 136.00, 90]
 
 # todo: change the variable names according to the case at hand
 strCost = 'Cost'
@@ -69,9 +71,9 @@ str3 = 'Construction time'
 str4 = 'CO2 emissions'
 str5 = 'Profit'
 strTitleXCost = strCost + ' (M€)'
-strTitleXCapacity = strCapacity + ''
+strTitleXCapacity = strCapacity + ' (cars/h)'
 strTitleX3 = str3 + ' (years)'
-strTitleX4 = str4 + ' (Bton)'
+strTitleX4 = str4 + ' (kton)'
 strTitleX5 = str5 + ' (M€)'
 strTitleY = 'Preference score'
 
@@ -82,9 +84,15 @@ def calculate_capacity(x1, x2, x3, x4, x5, x6, x7, x8, x9):
 def calculate_construction_time(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     return (x1 * x2 / (x8 * x9)) ** 0.3
 def calculate_CO2_emissions(x1, x2, x3, x4, x5, x6, x7, x8, x9):
-    return x1 * (x3 + 2 * x4) * (x2 * x5 + 2 * x4) * 0.0005 # in kton
+    return x1 * (x3 + 2 * x4 + 1) * (x2 * x5 + 2 * x4) * 0.0005 # in kton
 def calculate_profit(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     return calculate_cost(x1, x2, x3, x4, x5, x6, x7, x8, x9) * 0.2
+
+CalcCost = calculate_cost(b1Len, b2Lanes, b3Height, b4Thickness, b5LaneWidth, b6SpeedLimit, b7Density, b8Machines, b9Politian)
+CalcCapacity = calculate_capacity(b1Len, b2Lanes, b3Height, b4Thickness, b5LaneWidth, b6SpeedLimit, b7Density, b8Machines, b9Politian)
+CalcConstructionTime = calculate_construction_time(b1Len, b2Lanes, b3Height, b4Thickness, b5LaneWidth, b6SpeedLimit, b7Density, b8Machines, b9Politian)
+CalcCO2 = calculate_CO2_emissions(b1Len, b2Lanes, b3Height, b4Thickness, b5LaneWidth, b6SpeedLimit, b7Density, b8Machines, b9Politian)
+CalcProfit = calculate_profit(b1Len, b2Lanes, b3Height, b4Thickness, b5LaneWidth, b6SpeedLimit, b7Density, b8Machines, b9Politian)
 
 def objective_p1(x1, x2, x3, x4, x5, x6, x7, x8, x9):
     """
@@ -364,8 +372,8 @@ fig.savefig("Oosterweel.png")
 
 # We run the optimization with two paradigms
 paradigm = ['minmax', 'tetra']
-marker = ['o', '*', "s"]
-colours = ['orange', 'green', 'red']
+marker = ['o', '*', 's', '^']
+colours = ['orange', 'green', 'red', 'blue']
 
 # Define the figure and axes before the loop
 fig = plt.figure(figsize=(12, 8))
@@ -411,7 +419,8 @@ for i in range(2):
 
     # Run the GA and print its result
     print(f'Run GA with {paradigm[i]}')
-    ga = GeneticAlgorithm(objective=objective, constraints=cons, bounds=bounds, options=options, start_points_population=None)
+    ga = GeneticAlgorithm(objective=objective, constraints=cons, bounds=bounds, options=options, start_points_population=
+                          [start_Points_population])
     score_IMAP, design_variables_IMAP, _ = ga.run()
 
     # Print the optimal result in a readable format
@@ -467,11 +476,28 @@ p2_Act = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, c2_Act)
 p3_Act = pchip_interpolate(X_POINTS_ConsTime, P_POINTS_ConsTime, c3_Act)
 p4_Act = pchip_interpolate(X_POINTS_CO2, P_POINTS_CO2, c4_Act)
 p5_Act = pchip_interpolate(X_POINTS_Profit, P_POINTS_Profit, c5_Act)
-ax1.scatter(c1_Act, p1_Act, label='Actual solution', color=colours[2], marker=marker[2])
-ax2.scatter(c2_Act, p2_Act, label='Actual solution', color=colours[2], marker=marker[2])
-ax3.scatter(c3_Act, p3_Act, label='Actual solution', color=colours[2], marker=marker[2])
-ax4.scatter(c4_Act, p4_Act, label='Actual solution', color=colours[2], marker=marker[2])
-ax5.scatter(c5_Act, p5_Act, label='Actual solution', color=colours[2], marker=marker[2])
+ax1.scatter(c1_Act, p1_Act, label='Real life design', color=colours[2], marker=marker[2])
+# ax2.scatter(c2_Act, p2_Act, label='Real life design', color=colours[2], marker=marker[2])
+ax3.scatter(c3_Act, p3_Act, label='Real life design', color=colours[2], marker=marker[2])
+# ax4.scatter(c4_Act, p4_Act, label='Real life design', color=colours[2], marker=marker[2])
+# ax5.scatter(c5_Act, p5_Act, label='Real life design', color=colours[2], marker=marker[2])
+
+# Plot calculated numbers in the projects
+c1_Act = CalcCost
+c2_Act = CalcCapacity
+c3_Act = CalcConstructionTime
+c4_Act = CalcCO2
+c5_Act = CalcProfit
+p1_Act = pchip_interpolate(X_POINTS_COST, P_POINTS_COST, c1_Act)
+p2_Act = pchip_interpolate(X_POINTS_CAPACITY, P_POINTS_CAPACITY, c2_Act)
+p3_Act = pchip_interpolate(X_POINTS_ConsTime, P_POINTS_ConsTime, c3_Act)
+p4_Act = pchip_interpolate(X_POINTS_CO2, P_POINTS_CO2, c4_Act)
+p5_Act = pchip_interpolate(X_POINTS_Profit, P_POINTS_Profit, c5_Act)
+ax1.scatter(c1_Act, p1_Act, label='Calcu with real para', color=colours[3], marker=marker[3])
+ax2.scatter(c2_Act, p2_Act, label='Calcu with real para', color=colours[3], marker=marker[3])
+ax3.scatter(c3_Act, p3_Act, label='Calcu with real para', color=colours[3], marker=marker[3])
+ax4.scatter(c4_Act, p4_Act, label='Calcu with real para', color=colours[3], marker=marker[3])
+ax5.scatter(c5_Act, p5_Act, label='Calcu with real para', color=colours[3], marker=marker[3])
 
 # Add legends and set titles for each subplot
 ax1.legend()
